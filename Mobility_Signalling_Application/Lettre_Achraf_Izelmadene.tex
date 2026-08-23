@@ -1,0 +1,126 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs (identiques au CV) ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% ── En-tête identique au CV ──────────────────────────────────────────────────
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% Pas de photo pour la lettre de motivation
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \ifdef{\@photodiameter}{%
+    \begin{minipage}{\@photodiameter}
+    \if@normalphoto
+      \includegraphics[width=\linewidth]{\@photo}
+    \else
+      \begin{tikzpicture}
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.1\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}
+    \fi%
+    \end{minipage}\hspace{1.5em}%
+    \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+    \ifdef{\@photodiameter}{%
+    \end{minipage}\par}{}%
+  \endgroup\medskip
+}
+\makeatother
+
+% ── Séparateur horizontal coloré ─────────────────────────────────────────────
+\newcommand{\lettersep}{%
+  {\color{heading}\rule{\linewidth}{1.5pt}}\par\medskip
+}
+
+% ── Identité ─────────────────────────────────────────────────────────────────
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire (à droite — convention française) ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Responsable du Recrutement} \\
+  \textbf{Mobility Signalling -- VINCI Energies} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Candidature au poste de Stagiaire Ingénieur Système (Signalisation Ferroviaire)
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI de Marrakech, je me spécialise en Génie Électrique, Automatique et Systèmes Intelligents. Lors de mon récent stage au sein du bureau d'études Core Engineering Solutions, j'ai développé de solides compétences en réalisation d'études générales et détaillées. J'y ai notamment conçu des architectures de réseaux électriques et élaboré des schémas d'exécution et des notes de calcul sous Caneco BT et AutoCAD. Par ailleurs, mon expérience en unité de production chez Ménara Préfa m'a forgé une vision terrain de la maintenance et des processus industriels.
+
+\vspace{0.4cm}
+
+Au fil de mon parcours, j'ai cultivé une forte appétence pour l'ingénierie système en menant des projets d'envergure, tels que la modélisation sous Simulink et l'intégration Hardware-in-the-Loop d'un système de puissance. Cette expérience m'a permis d'appréhender la complexité des systèmes interconnectés et l'importance rigoureuse des phases d'essais.
+
+\vspace{0.4cm}
+
+Acteur majeur du développement des infrastructures de transport, Mobility Signalling se distingue par son expertise dans la conception et la sécurisation des systèmes ferroviaires de dernière génération. Particulièrement attiré par vos projets de mobilité (métro, tramway, train), je souhaite intégrer votre Business Unit Signalling pour contribuer activement à ces défis techniques exigeants où la sécurité et l'innovation sont primordiales.
+
+\vspace{0.4cm}
+
+Curieux, adaptable et profondément rigoureux, je vous apporterai mon esprit d'analyse pour mener à bien la réalisation des études de signalisation, la supervision des plans techniques et la préparation des essais en plateforme. Ayant un fort esprit collaboratif et le sens des responsabilités, je suis prêt à m'investir pleinement au sein de vos équipes dès le 1\textsuperscript{er} février 2027 pour mon Projet de Fin d'Études (PFE).
+
+\vspace{0.4cm}
+
+Très intéressé par ce poste, je serais ravi de vous démontrer ma motivation et d'échanger sur vos projets lors d'un prochain entretien.
+
+\vspace{0.5cm}
+
+% ── Formule de politesse ─────────────────────────────────────────────────────
+Veuillez agréer, Madame, Monsieur, l'expression de mes sincères salutations.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

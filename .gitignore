@@ -1,0 +1,29 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.bcf
+*.run.xml
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.blg
+*.bbl
+*.xmpi
+missfont.log
+
+# PDF outputs (compiled, not source)
+*.pdf
+*.qlpreview/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VSCode
+.vscode/
+
+# KB agent notes (optional — remove if you want to track them)
+kb/

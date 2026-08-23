@@ -1,0 +1,144 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+% Ajustement des marges pour 1 seule colonne
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.0cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\DisableLigatures{encoding=*, family=*} % ATS-fix: Disables fi/fl/ffi ligatures in pdfLaTeX
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Curriculum Vitae -- Achraf Izelmadene},
+  pdfauthor={Achraf Izelmadene},
+  pdfsubject={Ingénieur Génie Électrique et Systèmes Intelligents},
+  pdfkeywords={génie électrique, automatisation, PLC, SCADA, instrumentation, stage, Lantic}
+}
+
+% PAS DE PHOTO - NORME CANADIENNE
+
+\renewcommand{\cvsection}[2][]{%
+  \medskip%
+  {\color{heading}\LARGE\bfseries #2 \hspace{0.2em}\leaders\vrule height 4pt depth -2pt\hfill\mbox{}}\par\smallskip
+}
+\renewcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\smallskip}
+
+\renewcommand{\cvevent}[4]{%
+  {\large\bfseries\color{accent}#1\par}
+  \smallskip\normalsize
+  \ifstrequal{#2}{}{}{%
+    \textbf{\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
+  }%
+  \hfill
+  \ifstrequal{#3}{}{}{{\small#3}}%  % Removed calendar icon
+  \par\smallskip
+}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212699098736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc (Mobilité internationale)}
+}
+
+\makecvheader
+\cvsection{PROFIL}
+À la recherche d'un stage de fin d'études PFE (dès sept. 2026) en génie électrique et production automatisée. Curieux et motivé, je souhaite m'investir dans la mise en service d'installations, la validation d'instrumentation et de contrôle (I/O, PLC) et le suivi de schémas électriques (P\&ID) pour un projet industriel d'envergure.
+
+\cvsection{EXPÉRIENCE}
+\cvevent{Stagiaire Bureau d'Études}{Core Engineering Solutions}{juil. - août 2026}{Berrchid, Casablanca}
+\begin{itemize}
+\item Dimensionnement HTA/BT, intégration solaire et mise à jour de plans électriques et P\&ID.
+\item Bilans de puissance et vérification de la concordance terrain/plans (AutoCAD, Caneco BT).
+\end{itemize}
+\cvevent{Stagiaire en Unité de Production}{Menara Prefa}{juil. 2024}{Marrakech}
+\begin{itemize}
+\item Migration d'automate (PLC) vers Siemens S7 (TIA Portal), vérifications I/O et tests fonctionnels.
+\item Suivi des déficiences, résolution d'incidents et maintenance préventive/corrective sur lignes.
+\end{itemize}
+
+\cvsection{PROJETS}
+{\large\bfseries\color{accent} Smart Agriculture IoT Ecosystem}\\[0.05cm]
+\begin{itemize}
+  \item Conception de capteurs (instrumentation), décision ESP32 (logique floue) et intégration LoRa.
+  \item Modèle d'IA vision (smartphone) et dashboard pour le suivi des installations terrain.
+\end{itemize}
+
+{\large\bfseries\color{accent} Commande d'un Gradateur par Arduino}\\[0.05cm]
+\begin{itemize}
+  \item Modélisation de boucles de contrôle sous Simulink et interfaçage Hardware-in-the-Loop.
+  \item Essais d'équipements, régulation de puissance électrique et simulation de variateurs de vitesse.
+\end{itemize}
+
+{\large\bfseries\color{accent} Maintenance Prédictive 4.0 par AutoML}\\[0.05cm]
+\begin{itemize}
+  \item Benchmark d'outils AutoML sur des données d'instrumentation (vibrations, température) de moteurs.
+  \item Pipelines ML pour la prédiction de déficiences, validation croisée et optimisation de la maintenance.
+\end{itemize}
+
+{\large\bfseries\color{accent} Détection d'anomalies Smartgrid (Clustering)}\\[0.05cm]
+\begin{itemize}
+  \item Évaluation d'algorithmes (KMeans, DBSCAN) sur des données IoT de réseaux électriques.
+  \item Développement d'un système de monitoring interactif (HMI/SCADA) pour détecter les anomalies.
+\end{itemize}
+
+
+\cvsection{FORMATION}
+\cvevent{Étudiant en cycle d'ingénieur en Génie Électrique et Systèmes Intelligents}{École Marocaine des Sciences de l'Ingénieur}{2025 - Présent}{Marrakech}
+\small Électricité industrielle, Automates Programmables (PLC), HMI / SCADA, Réseaux industriels, Smart capteurs... (Plus de 60 crédits accumulés).
+
+\cvevent{Licence SMP, option Automatique}{Faculté des Sciences Semlalia}{2020 - 2024}{Marrakech}
+\small Électrostatique \& Électromagnétisme, Électronique, Traitement du signal, Automatique et Régulation...
+
+\cvsection{COMPÉTENCES}
+\begin{tabular}{@{}ll@{}}
+\textbf{Ingénierie \& Contrôle :} & Électricité indus., Instrumentation, Lecture de plans et P\&ID, AutoCAD, Caneco BT \\[1pt]
+\textbf{Automates \& Réseaux :} & Automates programmables (PLC), Siemens S7, TIA Portal, HMI / SCADA \\[1pt]
+\textbf{Programmation :} & Python, C/C++, JavaScript, HTML/CSS \\[1pt]
+\textbf{Outils \& Plateformes :} & 3DEXPERIENCE, Arduino, Git, Docker, PyBullet, MATLAB, Simulink \\
+\end{tabular}
+
+\cvsection{CERTIFICATIONS}
+{\large\bfseries\color{accent} Foundations of IoT Systems and Industrial Automation} \hfill \color{emphasis}LearnQuest (Coursera)\par\smallskip
+{\large\bfseries\color{accent} Sensors and Sensor Circuit Design} \hfill \color{emphasis}University of Colorado Boulder (Coursera)\par\smallskip
+{\large\bfseries\color{accent} Certified 3DEXPERIENCE Collaborative Industry Innovator} \hfill \color{emphasis}Dassault Systèmes\par\smallskip
+{\large\bfseries\color{accent} MATLAB / Simulink Onramp} \hfill \color{emphasis}MathWorks\par\smallskip
+
+\cvsection{LANGUES \& DIVERS}
+\textbf{Arabe :} Langue maternelle \hfill \textbf{Français :} DELF B2 \hfill \textbf{Anglais :} EFSET B2\\[2pt]
+\textbf{Prix :} 1\textsuperscript{er} Hack The Intelligence - AISEC Summit 2026 \hfill 2\textsuperscript{ème} Vision AI Competition - EMSI 2026\\[2pt]
+\textbf{Permis de conduire :} B \hfill \textbf{Loisirs :} Lecture, Échecs, Électronique DIY
+
+
+\end{document}

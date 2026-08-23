@@ -1,0 +1,155 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+% Ajustement des marges pour 1 seule colonne
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.0cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\DisableLigatures{encoding=*, family=*} % ATS-fix: Disables fi/fl/ffi ligatures in pdfLaTeX
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Curriculum Vitae -- Achraf Izelmadene},
+  pdfauthor={Achraf Izelmadene},
+  pdfsubject={Ingénieur Génie Électrique et Systèmes Intelligents},
+  pdfkeywords={génie électrique, IoT, automatisation, AutoML, robotique, PFE, stage}
+}
+\photo{2.2cm}{assets/imageee.png}
+
+\renewcommand{\cvsection}[2][]{%
+  \medskip%
+  {\color{heading}\LARGE\bfseries #2 \hspace{0.2em}\leaders\vrule height 4pt depth -2pt\hfill\mbox{}}\par\smallskip
+}
+\renewcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\smallskip}
+
+\renewcommand{\cvevent}[4]{%
+  {\large\bfseries\color{accent}#1\par}
+  \smallskip\normalsize
+  \ifstrequal{#2}{}{}{%
+    \textbf{\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
+  }%
+  \hfill
+  \ifstrequal{#3}{}{}{{\small#3}}%  % Removed calendar icon
+  \par\smallskip
+}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \ifdef{\@photodiameter}{%
+    \begin{minipage}{\@photodiameter}
+    \if@normalphoto
+      \includegraphics[width=\linewidth]{\@photo}
+    \else
+      \begin{tikzpicture}
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.1\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}
+    \fi%
+    \end{minipage}\hspace{1.5em}%
+    \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+    \ifdef{\@photodiameter}{%
+    \end{minipage}\par}{}%
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212699098736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+\cvsection{PROFIL}
+Élève ingénieur en Génie Électrique, passionné par les énergies renouvelables et les smartgrids, je recherche un PFE de 6 mois dès le 1\textsuperscript{er} février 2027. Je souhaite mettre mes compétences en dimensionnement d'installations photovoltaïques, en autoconsommation et en flexibilité énergétique au service de vos projets de grande puissance chez Deltaforce Énergie.
+
+\cvsection{EXPÉRIENCE}
+\cvevent{Stagiaire Bureau d'Études (Photovoltaïque)}{Core Engineering Solutions}{juil. - août 2026}{Berrchid, Casablanca}
+\begin{itemize}
+\item Étude et dimensionnement d'une installation solaire PV en autoconsommation avec poste HTA/BT.
+\item Création de dossiers techniques : bilans de puissance, schémas unifilaires et productibles (PVsyst, Caneco BT).
+\end{itemize}
+\cvevent{Stagiaire en Unité de Production}{Menara Prefa}{juil. 2024}{Marrakech}
+\begin{itemize}
+\item Migration d'un automate industriel vers Siemens S7 sous TIA Portal, suivi de maintenance préventive/corrective.
+\item Diagnostic des pannes électriques et participation à l'amélioration continue des processus industriels.
+\end{itemize}
+
+\cvsection{PROJETS}
+{\large\bfseries\color{accent} Precision Agriculture IoT Ecosystem}\\[0.05cm]
+\begin{itemize}
+  \item Déploiement d'un réseau IoT radio (LoRa) reliant des nœuds capteurs (Arduino) à une passerelle (ESP32).
+  \item Intégration d'une IA Edge (TFLite) et développement d'un dashboard web pour la supervision globale du système.
+\end{itemize}
+
+{\large\bfseries\color{accent} SmartStruct : Éclairage Public Piézoélectrique (IoT)}\\[0.05cm]
+\begin{itemize}
+  \item Conception d'un système IoT hybride de récupération d'énergie cinétique urbaine (Energy Harvesting) via dalles piézoélectriques.
+  \item Réalisation d'un PoC pour l'alimentation de l'éclairage public, présenté au congrès scientifique COCIA'26.
+\end{itemize}
+
+{\large\bfseries\color{accent} Détection d'anomalies \& Équilibrage Smartgrid}\\[0.05cm]
+\begin{itemize}
+  \item Analyse de données IoT de réseaux électriques pour l'étude de la stabilité et de la flexibilité énergétique.
+  \item Développement d'un dashboard de monitoring continu dédié à la détection d'anomalies par clustering.
+\end{itemize}
+
+
+
+
+\cvsection{FORMATION}
+\cvevent{Étudiant en cycle d'ingénieur en Génie Électrique et Systèmes Intelligents}{École Marocaine des Sciences de l'Ingénieur}{2025 - Présent}{Marrakech}
+\small Réseaux et Installations électriques, Sécurité électrique, Électronique de puissance, Supervision \& Digital Twin, Gestion de projet...
+
+\cvevent{Licence SMP, option Automatique}{Faculté des Sciences Semlalia}{2020 - 2024}{Marrakech}
+\small Électromagnétisme, Électronique, Traitement du signal, Automatique, Instrumentation, Informatique Industrielle...
+%\cvevent{Baccalauréat Scientifique, option Sciences Physiques et Chimiques}{Lycée Maghreb Al Arabi}{2019 -- 2020}{Marrakech}
+
+\cvsection{COMPÉTENCES}
+\begin{tabular}{@{}ll@{}}
+\textbf{Ingénierie \& CAO :} & PVsyst, AutoCAD, Caneco BT, MATLAB, Simulink \\[1pt]
+\textbf{Connaissances :} & Photovoltaïque, Stockage d'énergie, Autoconsommation, Flexibilité réseau, CFO/CFA \\[1pt]
+\textbf{Programmation :} & Python, C/C++, JavaScript, HTML/CSS \\[1pt]
+\textbf{Outils \& Plateformes :} & Arduino, Git, Docker, Gestion de projet \\
+\end{tabular}
+
+\cvsection{CERTIFICATIONS}
+\begin{itemize}[leftmargin=*, label=\textbullet, itemsep=2pt]
+  \item \textbf{Foundations of IoT Systems and Industrial Automation} \hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{Sensors and Sensor Circuit Design} \hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator} \hfill {\color{emphasis}Dassault Systèmes}
+  \item \textbf{MATLAB / Simulink Onramp} \hfill {\color{emphasis}MathWorks}
+\end{itemize}
+\cvsection{LANGUES \& DIVERS}
+\textbf{Arabe :} Langue maternelle \hfill \textbf{Français :} DELF B2 \hfill \textbf{Anglais :} EFSET B2\\[2pt]
+\textbf{Prix :} 1\textsuperscript{er} Hack The Intelligence - AISEC Summit 2026 \hfill 2\textsuperscript{ème} Vision AI Competition - EMSI 2026\\[2pt]
+\textbf{Permis de conduire :} B \hfill \textbf{Loisirs :} Lecture, Échecs, Électronique DIY
+
+
+\end{document}

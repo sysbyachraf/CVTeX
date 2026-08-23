@@ -1,0 +1,122 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs (identiques au CV) ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% ── En-tête identique au CV ──────────────────────────────────────────────────
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% Pas de photo pour la lettre de motivation
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \ifdef{\@photodiameter}{%
+    \begin{minipage}{\@photodiameter}
+    \if@normalphoto
+      \includegraphics[width=\linewidth]{\@photo}
+    \else
+      \begin{tikzpicture}
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.1\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}
+    \fi%
+    \end{minipage}\hspace{1.5em}%
+    \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+    \ifdef{\@photodiameter}{%
+    \end{minipage}\par}{}%
+  \endgroup\medskip
+}
+\makeatother
+
+% ── Séparateur horizontal coloré ─────────────────────────────────────────────
+\newcommand{\lettersep}{%
+  {\color{heading}\rule{\linewidth}{1.5pt}}\par\medskip
+}
+
+% ── Identité ─────────────────────────────────────────────────────────────────
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire (à droite — convention française) ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Responsable du Recrutement} \\
+  \textbf{Equans France (Bouygues Energies et Services)} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Candidature au poste de Stagiaire en Informatique et Automatisme Industriel - Supervision
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en 5\textsuperscript{ème} année à l'EMSI (École Marocaine des Sciences de l'Ingénieur) de Marrakech, je me spécialise en Génie Électrique, Automatique et Systèmes Intelligents. Au cours de mon parcours, j'ai développé de solides compétences en informatique industrielle et en réseaux de communication. Mon récent stage chez Ménara Préfa, où j'ai participé à la migration d'un automate industriel vers Siemens S7 sous TIA Portal, m'a permis d'acquérir une expérience concrète en contrôle-commande et en gestion des équipements de terrain.
+
+\vspace{0.4cm}
+
+Parallèlement, j'ai cultivé une forte appétence pour la supervision et le développement logiciel à travers divers projets, allant de la conception de dashboards pour des nœuds IoT (agriculture de précision) à l'intégration Hardware-in-the-Loop (HIL) sous Simulink. Mon esprit d'analyse et ma rigueur technique me permettront d'appréhender rapidement les enjeux liés à vos systèmes, qu'il s'agisse de réseaux IP ou de solutions de vidéosurveillance.
+
+\vspace{0.4cm}
+
+Acteur de référence dans l'optimisation des infrastructures de mobilité, Equans France se distingue par ses solutions techniques intégrées et innovantes. Je souhaite intégrer votre Service Informatique et Automatisme Industriel pour participer activement au cycle en V de vos projets de supervision technique. Ma maîtrise des architectures d'automatisme et mon aisance en informatique industrielle me permettront d'exploiter pleinement le potentiel de vos progiciels de supervision. Je suis particulièrement enthousiaste à l'idée d'en utiliser les studios graphiques et les drivers de communication pour concevoir des interfaces de contrôle fiables, et mener à bien les tests de qualification sur votre plateforme-usine.
+
+\vspace{0.4cm}
+
+Très intéressé par ce poste, je serais ravi de vous démontrer ma motivation et d'échanger sur vos projets lors d'un prochain entretien.
+
+\vspace{0.5cm}
+
+% ── Formule de politesse ─────────────────────────────────────────────────────
+Veuillez agréer, Madame, Monsieur, l'expression de mes sincères salutations.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

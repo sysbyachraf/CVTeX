@@ -1,0 +1,122 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs (identiques au CV) ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% ── En-tête identique au CV ──────────────────────────────────────────────────
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% Pas de photo pour la lettre de motivation
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \ifdef{\@photodiameter}{%
+    \begin{minipage}{\@photodiameter}
+    \if@normalphoto
+      \includegraphics[width=\linewidth]{\@photo}
+    \else
+      \begin{tikzpicture}
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.1\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}
+    \fi%
+    \end{minipage}\hspace{1.5em}%
+    \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+    \ifdef{\@photodiameter}{%
+    \end{minipage}\par}{}%
+  \endgroup\medskip
+}
+\makeatother
+
+% ── Séparateur horizontal coloré ─────────────────────────────────────────────
+\newcommand{\lettersep}{%
+  {\color{heading}\rule{\linewidth}{1.5pt}}\par\medskip
+}
+
+% ── Identité ─────────────────────────────────────────────────────────────────
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire (à droite — convention française) ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Responsable du Recrutement} \\
+  \textbf{Equans France (Bouygues Energies et Services)} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Candidature au poste de Stagiaire Assistant Ingénieur d'Affaires Travaux
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI de Marrakech, je me spécialise en Génie Électrique, avec un fort intérêt pour la gestion d'infrastructures. Mon expérience au sein du bureau d'études Core Engineering Solutions m'a permis de maîtriser la préparation de dossiers techniques en courants forts et faibles (CFO/CFA), en réalisant des dimensionnements HTA/BT dans le respect de la norme NF C 15-100, des bilans de puissance et des notes de calcul sur Caneco BT et AutoCAD.
+
+\vspace{0.4cm}
+
+Complétant cette expertise technique, mon stage en unité de production chez Ménara Préfa a forgé mon goût pour le terrain et la résolution concrète de problèmes. Habitué à collaborer avec différentes équipes techniques et à faire preuve de rigueur, j'ai développé un réel attrait pour le suivi de chantier, la gestion de projet et l'optimisation des ressources en milieu industriel.
+
+\vspace{0.4cm}
+
+Rejoindre Equans France, acteur incontournable de la transition énergétique, au sein de l'entité Bouygues Energies et Services, représente pour moi l'opportunité de participer à des Grands Projets d'infrastructures tertiaires et industrielles. Je suis prêt à vous seconder efficacement dans vos missions d'Ingénierie d'Affaires, du chiffrage à l'animation des sous-traitants, en assurant un suivi rigoureux de l'avancement et du budget.
+
+\vspace{0.4cm}
+
+Très intéressé par ce poste, je serais ravi de vous démontrer ma motivation et d'échanger sur vos projets lors d'un prochain entretien.
+
+\vspace{0.5cm}
+
+% ── Formule de politesse ─────────────────────────────────────────────────────
+Veuillez agréer, Madame, Monsieur, l'expression de mes sincères salutations.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

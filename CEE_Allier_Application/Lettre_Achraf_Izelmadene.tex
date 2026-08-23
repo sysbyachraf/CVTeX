@@ -1,0 +1,116 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs (identiques au CV) ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% ── En-tête identique au CV ──────────────────────────────────────────────────
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% Pas de photo pour la lettre de motivation
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \ifdef{\@photodiameter}{%
+    \begin{minipage}{\@photodiameter}
+    \if@normalphoto
+      \includegraphics[width=\linewidth]{\@photo}
+    \else
+      \begin{tikzpicture}
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.1\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}
+    \fi%
+    \end{minipage}\hspace{1.5em}%
+    \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+    \ifdef{\@photodiameter}{%
+    \end{minipage}\par}{}%
+  \endgroup\medskip
+}
+\makeatother
+
+% ── Séparateur horizontal coloré ─────────────────────────────────────────────
+\newcommand{\lettersep}{%
+  {\color{heading}\rule{\linewidth}{1.5pt}}\par\medskip
+}
+
+% ── Identité ─────────────────────────────────────────────────────────────────
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+\bigskip
+\medskip
+
+% ── Destinataire (à droite — convention française) ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Responsable du Recrutement} \\
+  \textbf{CEE Allier -- VINCI Energies} \\[20pt]
+  Marrakech, le 18 août 2026
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Candidature au poste de Stagiaire Ingénieur Développement Photovoltaïque (PFE)
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.6cm}
+
+Acteur de proximité majeur sur le territoire de l'Allier et filiale du groupe VINCI Energies, CEE Allier s'impose comme un partenaire incontournable pour accompagner ses clients dans leurs enjeux de transition écologique et de performance énergétique. Fort de votre engagement dans le déploiement de solutions durables, vous soutenez activement le développement de l'activité photovoltaïque et de la mobilité électrique dans la région. C'est dans cette dynamique d'innovation que vous recherchez un profil engagé, autonome et rigoureux pour concevoir les projets de demain.
+
+\vspace{0.6cm}
+
+Élève ingénieur en 5\textsuperscript{ème} année de Génie Électrique et Systèmes Intelligents à l'EMSI, je suis vivement intéressé par ces missions stratégiques. Lors de mon passage en bureau d'études, j'ai développé de solides compétences en dimensionnement d'installations HTA/BT, en réalisation de bilans de puissance et en élaboration de notes de calcul sous Caneco BT et AutoCAD. J'ai également eu l'opportunité d'étudier l'intégration d'installations solaires photovoltaïques en autoconsommation sous PVsyst. Par ailleurs, mon expérience en unité de production chez Menara Prefa m'a forgé une vision terrain de la maintenance industrielle (préventive et corrective), un atout indispensable pour garantir la fiabilité de vos réseaux d'énergie. Mon esprit d'analyse et ma maîtrise de la gestion de projet me permettront de concevoir avec rigueur vos futurs projets photovoltaïques.
+
+\vspace{0.6cm}
+
+Rejoindre l'équipe dynamique de CEE Allier près de Clermont-Ferrand, pour mon Projet de Fin d'Études de 6 mois à compter du 1\textsuperscript{er} février 2027, représente l'opportunité exceptionnelle d'allier études de conception et réalités du terrain. Particulièrement motivé par les valeurs d'autonomie et de responsabilité prônées par VINCI Energies, je suis convaincu que nous saurons construire ensemble une collaboration fructueuse. Je me tiens à votre entière disposition pour vous démontrer ma motivation et mon esprit d'équipe lors d'un entretien.
+
+\vspace{0.8cm}
+
+% ── Formule de politesse ─────────────────────────────────────────────────────
+Veuillez agréer, Madame, Monsieur, l'expression de mes sincères salutations.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

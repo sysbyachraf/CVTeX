@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{accsupp}
+\begin{document}
+Test with accsupp: 
+\BeginAccSupp{method=pdfstringdef,unicode,ActualText=Email: }\faEnvelope\EndAccSupp{} user@example.com
+
+Test without accsupp:
+\faEnvelope user@example.com
+\end{document}
