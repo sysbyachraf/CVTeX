@@ -13,8 +13,7 @@
 *.xmpi
 missfont.log
 
-# PDF outputs (compiled, not source)
-*.pdf
+# PDF preview caches only
 *.qlpreview/
 
 # macOS
