@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CVTeX Generator — Achraf Izelmadene</title>
+  <meta name="description" content="Generateur de CV et lettres de motivation adaptes aux offres d'emploi" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css?v=2" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">CV</span>
+        <span class="brand-name">TeX Generator</span>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-view="generate" id="nav-generate">Generate</button>
+        <button class="nav-item" data-view="jobs" id="nav-jobs">Jobs
+          <span class="badge" id="badge-count" style="display:none">0</span>
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="footer-label">Achraf Izelmadene</span>
+        <button class="btn-ghost small" id="btn-clear-all" title="Clear all jobs">Clear</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Generate view -->
+      <section class="view active" id="view-generate">
+        <header class="view-header">
+          <h1>Generate Applications</h1>
+          <div class="mode-toggle" id="mode-toggle">
+            <button class="toggle-btn active" data-mode="single" id="toggle-single">Single</button>
+            <button class="toggle-btn" data-mode="bulk" id="toggle-bulk">Bulk</button>
+          </div>
+        </header>
+
+        <!-- Single mode -->
+        <div class="mode-panel active" id="panel-single">
+          <form id="form-single" class="offer-form">
+            <div class="form-row">
+              <label class="field-label">Company</label>
+              <input class="field-input" type="text" name="company" id="s-company" placeholder="Schneider Electric" required />
+            </div>
+            <div class="form-row">
+              <label class="field-label">Job Title</label>
+              <input class="field-input" type="text" name="job_title" id="s-job-title" placeholder="Stagiaire Ingenieur Automatisme" required />
+            </div>
+            <div class="form-row">
+              <label class="field-label">Job Description</label>
+              <textarea class="field-input textarea" name="job_description" id="s-description" rows="6" placeholder="Paste the full job description here..." required></textarea>
+            </div>
+            <div class="form-row">
+              <label class="field-label">Keywords <span class="optional">optional</span></label>
+              <input class="field-input" type="text" name="keywords" id="s-keywords" placeholder="TIA Portal, SCADA, maintenance" />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary" id="btn-single-generate">Generate</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Bulk mode -->
+        <div class="mode-panel" id="panel-bulk">
+          <div class="bulk-toolbar">
+            <div class="upload-zone" id="upload-zone">
+              <span class="upload-icon">+</span>
+              <span class="upload-text">Drop CSV file here or <label for="csv-input" class="upload-link">browse</label></span>
+              <input type="file" id="csv-input" accept=".csv" hidden />
+            </div>
+            <div class="bulk-actions">
+              <button class="btn-secondary" id="btn-add-row">Add row</button>
+              <button class="btn-primary" id="btn-bulk-generate" disabled>Generate All</button>
+            </div>
+          </div>
+
+          <!-- Editable offers table -->
+          <div class="table-wrapper">
+            <table class="offers-table" id="offers-table">
+              <thead>
+                <tr>
+                  <th style="width:28px"></th>
+                  <th>Company</th>
+                  <th>Job Title</th>
+                  <th>Job Description</th>
+                  <th>Keywords <span class="optional">optional</span></th>
+                </tr>
+              </thead>
+              <tbody id="offers-body">
+                <!-- rows injected by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jobs view -->
+      <section class="view" id="view-jobs">
+        <header class="view-header">
+          <h1>Applications</h1>
+          <div class="header-actions">
+            <button class="btn-secondary" id="btn-approve-all">Approve All Ready</button>
+            <button class="btn-secondary" id="btn-save-all">Save All Compiled</button>
+          </div>
+        </header>
+
+        <div class="jobs-table-wrapper">
+          <table class="jobs-table" id="jobs-table">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Status</th>
+                <th>Pages</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="jobs-body">
+              <tr class="empty-row"><td colspan="4">No applications yet. Generate from the Generate view.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Stage 1 Panel (slide-in) -->
+  <div class="overlay" id="s1-overlay" hidden></div>
+  <aside class="side-panel" id="side-panel" hidden>
+    <div class="panel-header">
+      <div>
+        <div class="panel-title" id="s1-title">Review</div>
+        <div class="panel-subtitle" id="s1-subtitle"></div>
+      </div>
+      <button class="panel-close" id="s1-close">x</button>
+    </div>
+    <div class="panel-body">
+      <div class="panel-section">
+        <label class="section-label">Profil (accroche)</label>
+        <textarea class="panel-textarea" id="s1-profil" rows="5"></textarea>
+      </div>
+      <div class="panel-section">
+        <label class="section-label">Lettre de motivation</label>
+        <textarea class="panel-textarea" id="s1-lettre" rows="14"></textarea>
+      </div>
+      <div class="panel-section">
+        <label class="section-label">Projects selected</label>
+        <div class="checkbox-list" id="s1-projects"></div>
+      </div>
+      <div class="panel-section">
+        <label class="section-label">Certifications selected</label>
+        <div class="checkbox-list" id="s1-certifs"></div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <button class="btn-ghost" id="s1-reject">Reject</button>
+      <button class="btn-secondary" id="s1-regenerate">Regenerate</button>
+      <button class="btn-primary" id="s1-approve">Approve &amp; Compile</button>
+    </div>
+  </aside>
+
+  <!-- Stage 2 Modal -->
+  <div class="modal-overlay" id="s2-overlay" hidden>
+    <div class="modal" id="s2-modal">
+      <div class="modal-header">
+        <div class="modal-title" id="s2-title">Preview</div>
+        <button class="panel-close" id="s2-close">x</button>
+      </div>
+      <div class="modal-body">
+        <div class="overflow-warning" id="s2-overflow" hidden>
+          CV exceeds 1 page. Edit the text in Stage 1 before saving.
+        </div>
+        <div class="pdf-viewers">
+          <div class="pdf-pane">
+            <div class="pdf-label">CV</div>
+            <iframe id="s2-cv-frame" class="pdf-frame" src="about:blank"></iframe>
+          </div>
+          <div class="pdf-pane">
+            <div class="pdf-label">Lettre de motivation</div>
+            <iframe id="s2-lettre-frame" class="pdf-frame" src="about:blank"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ghost" id="s2-close-btn">Close</button>
+        <button class="btn-primary" id="s2-save">Save to offres/</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js?v=2"></script>
+</body>
+</html>

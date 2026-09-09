@@ -60,8 +60,16 @@ CVTeX/
 - [ ] Read `optimisation_cv.md` → identify which sections need tailoring to the offer keywords
 - [ ] Read `optimisation_lettre.md` → verify the letter follows VOUS → MOI → NOUS structure
 - [ ] Check vocabulary alignment between offer text and CV/letter language
+- [ ] Select between **2 (minimum) and 3 (maximum)** projects based on relevance and available space.
 - [ ] Verify the CV compiles to exactly **1 page** after any edits
-- [ ] Place output PDFs in `offres/[Entreprise_Offre]/` — never add `.tex` source files to offres/
+- [ ] Place both output PDFs AND their source `.tex` files in `offres/[Entreprise_Offre]/`. **IMPORTANT: Name the files strictly `CV_Achraf_Izelmadene` and `Lettre_Achraf_Izelmadene` (do NOT append the company name).**
+
+### Rédiger la Lettre de Motivation
+- [ ] L'Objet doit indiquer le titre du poste SANS les suffixes génériques comme "H/F", "F/H" ou "M/F".
+- [ ] Structurer la lettre en 3 parties (MOI, VOUS, NOUS).
+  1. **MOI** : Doit OBLIGATOIREMENT commencer par "Actuellement étudiant en dernière année à l'EMSI [de Marrakech] en Génie Électrique et Systèmes Intelligents" (vous pouvez varier légèrement la phrase ou omettre Marrakech). Mentionnez ici *vos* projets (issus de la KB) et liez-les explicitement aux besoins de l'offre.
+  2. **VOUS** : L'entreprise et l'offre (pourquoi elle m'intéresse, le lien avec mes compétences).
+  3. **NOUS** : Ce que nous allons accomplir ensemble, la valeur ajoutée apportée au poste.
 
 ---
 
