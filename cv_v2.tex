@@ -42,7 +42,7 @@
   \ifstrequal{#2}{}{}{%
     {\small\itshape\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
   }%
-  \hfill
+  ~\hfill
   \ifstrequal{#3}{}{}{{\small\color{emphasis}#3}}%
   \par\vspace{2pt}
 }
@@ -71,6 +71,7 @@
     {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{3pt}
     \ifdef{\@target}{{\small\textbf{\@target}\par}\vspace{2pt}}{}%
     \ifdef{\@apropos}{{\small\color{emphasis}\@apropos\par}\vspace{3pt}}{}%
+    \vspace{2.5pt}%
     {\footnotesize\color{emphasis}\@personalinfo\par}
     \ifdef{\@photodiameter}{%
     \end{minipage}\par}{}%
@@ -92,11 +93,14 @@
 \target{À la recherche d’un stage de fin d’études (PFE) de 6 mois dès février 2027 en génie électrique, automatisme ou systèmes intelligents.}
 \apropos{Double compétence en génie électrique (installations HTA/BT, électronique de puissance, automatismes) et en systèmes intelligents (systèmes embarqués, IoT, IA). Fort d’expériences en bureau d’études et en unité de production, je souhaite contribuer à des projets alliant énergie, industrie et innovation.}
 
-\personalinfo{
-  \phone{+212699098736}
-  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
-  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
-  \location{Marrakech, Maroc}
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
 }
 
 \makecvheader
@@ -151,10 +155,10 @@
 
 \cvsection{CERTIFICATIONS}
 \begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
-  \item \textbf{Foundations of IoT Systems and Industrial Automation} \hfill {\color{emphasis}LearnQuest (Coursera)}
-  \item \textbf{Sensors and Sensor Circuit Design} \hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
-  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator} \hfill {\color{emphasis}Dassault Systèmes}
-  \item \textbf{MATLAB / Simulink Onramp} \hfill {\color{emphasis}MathWorks}
+  \item \textbf{Foundations of IoT Systems and Industrial Automation}~\hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{Sensors and Sensor Circuit Design}~\hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator}~\hfill {\color{emphasis}Dassault Systèmes}
+  \item \textbf{MATLAB / Simulink Onramp}~\hfill {\color{emphasis}MathWorks}
 \end{itemize}
 
 \cvsection{ACTIVITÉS \& COMPÉTITIONS}
@@ -165,8 +169,7 @@
   \item \textbf{Hackathon RallyIA (2026) - Participation :} Conception de l’architecture du projet "FindSpot" (Parking Intelligent).
 \end{itemize}
 
-\cvsection{LANGUES \& DIVERS}
-\textbf{Arabe :} Langue maternelle \hfill \textbf{Français :} DELF B2 \hfill \textbf{Anglais :} EFSET B2\\[1.5pt]
-\textbf{Permis de conduire :} B \hfill \textbf{Loisirs :} Lecture, Échecs, Électronique DIY
+\cvsection{LANGUES}
+\textbf{Arabe :} Langue maternelle~\hfill \textbf{Français :} DELF B2~\hfill \textbf{Anglais :} EFSET B2
 
 \end{document}
