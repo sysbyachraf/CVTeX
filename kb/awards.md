@@ -41,3 +41,10 @@
 - Year: 2026
 - Domain: [Smart City, Développement Durable, Innovation]
 - Description: Participation au challenge d'innovation (Mai 2026) avec la présentation du prototype d'éclairage public piézoélectrique SmartStruct.
+
+## Bénévolat & Action Sociale — Enseignement Solidaire
+
+- Organizer: Association caritative locale
+- Year: 2025
+- Domain: [Bénévolat, Pédagogie, Soutien scolaire, Engagement social]
+- Description: Enseignement et soutien scolaire bénévole dispensés à des enfants orphelins au sein d'une association (accompagnement pédagogique, renforcement des compétences scolaires fondamentales et tutorat humain).

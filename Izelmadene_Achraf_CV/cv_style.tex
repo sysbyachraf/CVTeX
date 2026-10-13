@@ -1,0 +1,140 @@
+% =====================================================================
+% cv_style.tex — STYLE COMMUN À TOUS LES PROFILS
+% Toute modification de mise en page se fait ICI (s'applique aux 6 CV).
+% Utilisation dans chaque profil :  \input{../cv_style.tex}
+% =====================================================================
+
+% Marges équilibrées pour 1 page complète
+\geometry{left=1.2cm,right=1.2cm,top=1.0cm,bottom=0.8cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\DisableLigatures{encoding=*, family=*} % ATS-fix: désactive les ligatures fi/fl/ffi
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={Achraf Izelmadene}}
+
+% Photo partagée (chemin relatif depuis un sous-dossier de profil)
+\photo{2.2cm}{../../assets/imageee.png}
+
+% ── Sections compactes ───────────────────────────────────────────────
+\renewcommand{\cvsection}[2][]{%
+  \vspace{4pt}%
+  {\color{heading}\Large\bfseries #2 \hspace{0.2em}\leaders\vrule height 3pt depth -1.5pt\hfill\mbox{}}\par\vspace{3pt}
+}
+
+\renewcommand{\cvevent}[4]{%
+  {\normalsize\bfseries\color{accent}#1\par}\vspace{1pt}
+  \ifstrequal{#2}{}{}{%
+    {\small\itshape\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
+  }%
+  ~\hfill
+  \ifstrequal{#3}{}{}{{\small\color{emphasis}#3}}%
+  \par\vspace{2pt}
+}
+
+% Liste à puces compacte
+\newenvironment{cvitems}{\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]}{\end{itemize}}
+
+% Titre de projet
+\newcommand{\cvprojet}[1]{{\normalsize\bfseries\color{accent} #1}\par\vspace{1.5pt}}
+
+% ── En-tête fusionné avec À Propos ───────────────────────────────────
+\makeatletter
+\newcommand{\target}[1]{\def\@target{#1}}
+\newcommand{\apropos}[1]{\def\@apropos{#1}}
+
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \ifdef{\@photodiameter}{%
+    \begin{minipage}[c]{\@photodiameter}
+    \if@normalphoto
+      \includegraphics[width=\linewidth]{\@photo}
+    \else
+      \begin{tikzpicture}
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.08\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}
+    \fi%
+    \end{minipage}\hspace{1.2em}%
+    \begin{minipage}[c]{\dimexpr\linewidth-\@photodiameter-1.5em}}{}%
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{1.5pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{3pt}
+    \ifdef{\@target}{{\small\textbf{\@target}\par}\vspace{2pt}}{}%
+    \ifdef{\@apropos}{{\small\color{emphasis}\@apropos\par}\vspace{3pt}}{}%
+    \vspace{2.5pt}%
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+    \ifdef{\@photodiameter}{%
+    \end{minipage}\par}{}%
+  \endgroup\vspace{1pt}
+}
+\makeatother
+
+% ── Blocs communs (identiques pour tous les profils) ─────────────────
+\newcommand{\cvidentite}{%
+  \name{Izelmadene Achraf}%
+  \personalinfo{%
+    \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+    \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+    +212699098736%
+    \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+    Marrakech, Maroc%
+    \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+    Permis B%
+  }%
+}
+
+% Formation : #1 = modules EMSI choisis pour le profil, #2 = modules Licence
+\newcommand{\cvformation}[2]{%
+  \cvsection{FORMATION}
+  \cvevent{Étudiant en cycle d’ingénieur en Génie Électrique et Systèmes Intelligents}{École Marocaine des Sciences de l’Ingénieur - Marrakech}{2025 - Présent}{}
+  {\footnotesize\color{emphasis}#1}\par\vspace{2.5pt}
+  \cvevent{Licence SMP, option Automatique}{Faculté des Sciences Semlalia - Marrakech}{2020 - 2024}{}
+  {\footnotesize\color{emphasis}#2}\par
+}
+
+% Expériences (source : kb/experience.md) — l'ordre des puces change selon le profil
+\newcommand{\expcore}[2]{%
+  \cvevent{Stagiaire Bureau d’Études}{Core Engineering Solutions}{juil. - août 2026}{Berrchid, Casablanca}
+  \begin{cvitems}
+    \item #1
+    \item #2
+  \end{cvitems}
+}
+\newcommand{\expmenara}[2]{%
+  \cvevent{Stagiaire en Unité de Production}{Menara Prefa}{juil. 2024}{Marrakech}
+  \begin{cvitems}
+    \item #1
+    \item #2
+  \end{cvitems}
+}
+
+% Activités (source : kb/awards.md)
+\newcommand{\cvactivites}{%
+  \cvsection{ACTIVITÉS \& ENGAGEMENT}
+  \begin{cvitems}
+    \item \textbf{Hack The Intelligence (AISEC 2026) - 1\textsuperscript{er} Prix :} Développement d’un prototype Smart Agriculture IoT.
+    \item \textbf{Vision AI Competition (EMSI 2026) - 2\textsuperscript{ème} Prix :} Système de traduction en langue des signes (ASL).
+    \item \textbf{Congrès COCIA’26 - Présentation Scientifique :} Prototype d’éclairage public piézoélectrique SmartStruct.
+    \item \textbf{Engagement Associatif \& Bénévolat (2025) :} Soutien scolaire et encadrement pédagogique d’enfants orphelins.
+  \end{cvitems}
+}
+
+\newcommand{\cvlangues}{%
+  \cvsection{LANGUES}
+  \textbf{Arabe :} Langue maternelle~\hfill \textbf{Français :} DELF B2~\hfill \textbf{Anglais :} Professionnel
+}

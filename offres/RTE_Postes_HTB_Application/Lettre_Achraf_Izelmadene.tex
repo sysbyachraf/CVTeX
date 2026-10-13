@@ -1,0 +1,102 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2.2cm,bottom=2.0cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs identiques au CV ────────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{4pt}
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+  \endgroup\vspace{6pt}
+  {\color{heading}\rule{\linewidth}{1.2pt}}\par\vspace{8pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents (GESI)}
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\makecvheader
+
+% ── Destinataire ─────────────────────────────────────────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de l'Équipe Recrutement \& des Responsables de Stage}} \\[2pt]
+  \textbf{RTE — Réseau de Transport d’Électricité} \\
+  Direction Technique — Centre de Projets Réseau Terrestre de Lyon \\
+  Service Pilotage et Coordination \\
+  69007 Lyon, France \\[8pt]
+  Fait à Marrakech, le \today
+\end{flushright}
+\vspace{4pt}
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+\noindent{\color{accent}\textbf{Objet :}} Candidature au stage de fin d'études (PFE) -- Appui au pilotage du portefeuille d'investissements des postes électriques HTB (Région Auvergne-Rhône-Alpes)
+
+\vspace{8pt}
+
+% ── Corps de la lettre : Structure MOI - MOI - VOUS - NOUS ───────────────────
+\noindent Madame, Monsieur,
+
+\vspace{5pt}
+
+% ── MOI 1 : Profil, Formation & Socle Réseaux Électriques
+Élève-ingénieur en 5\textsuperscript{ème} année à l'EMSI Marrakech en Génie Électrique et Systèmes Intelligents (GESI), précédé d'une Licence en Automatique à la Faculté des Sciences Semlalia, je dispose d'une solide maîtrise de la physique des réseaux électriques et de leurs infrastructures. Mon cursus m'a permis d'approfondir la conception des installations électriques HTA/BT, la sécurité et la protection des réseaux, l'électronique de puissance et les Smart Grids. J'ai consolidé cette assise technique lors de mon stage au bureau d'études \textit{Core Engineering Solutions}, où j'ai assuré le dimensionnement complet d'un poste de livraison HTA/BT pour une zone industrielle, l'établissement de bilans de puissance, de notes de calcul et de schémas d'exécution unifilaires.
+
+\vspace{5pt}
+
+% ── MOI 2 : Gestion de Projet, Analyse Décisionnelle & Outils Numériques / IA
+En complément de mon socle électrique, j'ai développé de fortes compétences en gestion de projet et en ingénierie de données. Certifié \textit{3DEXPERIENCE Collaborative Industry Innovator} par Dassault Systèmes, je maîtrise les outils de planification, de suivi d'avancement et d'animation transversale. J'ai également conduit des études de rentabilité et d'analyse financière de projets (chiffrage, VAN, ROI). Par ailleurs, ma maîtrise de l'écosystème Python (Pandas, Scikit-learn, Streamlit) et de l'automatisation de données — mise en œuvre lors du développement de dashboards interactifs pour la surveillance de réseaux électriques Smartgrid et la détection d'anomalies — me permet de concevoir des outils agiles d'aide à la décision, de contrôle et de visualisation budgétaire et technique.
+
+\vspace{5pt}
+
+% ── VOUS : RTE, Centre de Projets de Lyon & Portefeuille HTB
+Garant de la solidarité énergétique et opérateur du plus grand réseau de transport d'électricité d'Europe, RTE joue un rôle central dans la transition vers une société décarbonée. C'est avec un vif enthousiasme que je postule au sein du Centre de Projets Réseau Terrestre de Lyon. La mission confiée au Service Pilotage et Coordination — piloter stratégiquement les investissements pluriannuels de renouvellement des postes électriques HTB, arbitrer les consistances techniques avec les experts et moderniser les outils de pilotage par l'automatisation et l'IA — correspond exactement à mon projet professionnel à l'interface de l'ingénierie réseau et du management de projets d'envergure.
+
+\vspace{5pt}
+
+% ── NOUS : Synergie, Disponibilité PFE & Entretien
+Rejoindre votre équipe pour ce stage PFE de 5 à 6 mois dès janvier-mars 2027 représente l'opportunité de mettre mon autonomie, ma rigueur d'analyse et mes qualités relationnelles au service des arbitrages stratégiques du réseau en Auvergne-Rhône-Alpes. Capable d'échanger avec aisance avec des interlocuteurs variés et de synthétiser des problématiques complexes, je serais honoré de défendre ma candidature lors d'un entretien.
+
+\vspace{6pt}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{12pt}
+
+\begin{flushright}
+  \large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

@@ -1,0 +1,170 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+% Marges équilibrées pour 1 page complète
+\geometry{left=1.2cm,right=1.2cm,top=1.0cm,bottom=0.8cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\DisableLigatures{encoding=*, family=*} % ATS-fix: Disables ligatures in pdfLaTeX
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={CV -- Achraf Izelmadene -- Candidature IFPEN},
+  pdfauthor={Achraf Izelmadene},
+  pdfsubject={Stage PFE Machine Learning -- Décarbonation Industrielle},
+  pdfkeywords={Machine Learning, Time Series, NILM, Soft Sensing, Génie Électrique, Python, Décarbonation}
+}
+
+\photo{1.9cm}{assets/imageee.png}
+
+% Style compact pour les sections
+\renewcommand{\cvsection}[2][]{%
+  \vspace{4pt}%
+  {\color{heading}\Large\bfseries #2 \hspace{0.2em}\leaders\vrule height 3pt depth -1.5pt\hfill\mbox{}}\par\vspace{3pt}
+}
+
+\renewcommand{\cvevent}[4]{%
+  {\normalsize\bfseries\color{accent}#1\par}\vspace{1pt}
+  \ifstrequal{#2}{}{}{%
+    {\small\itshape\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
+  }%
+  ~\hfill
+  \ifstrequal{#3}{}{}{{\small\color{emphasis}#3}}%
+  \par\vspace{2pt}
+}
+
+% Header fusionné avec À Propos
+\makeatletter
+\newcommand{\target}[1]{\def\@target{#1}}
+\newcommand{\apropos}[1]{\def\@apropos{#1}}
+
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \ifdef{\@photodiameter}{%
+    \begin{minipage}[c]{\@photodiameter}
+    \if@normalphoto
+      \includegraphics[width=\linewidth]{\@photo}
+    \else
+      \begin{tikzpicture}
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.04\linewidth) {\includegraphics[width=1.15\linewidth]{\@photo}};
+      \end{tikzpicture}
+    \fi%
+    \end{minipage}\hspace{1.2em}%
+    \begin{minipage}[c]{\dimexpr\linewidth-\@photodiameter-1.5em}}{}%
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{1.5pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{3pt}
+    \ifdef{\@target}{{\small\textbf{\@target}\par}\vspace{2pt}}{}%
+    \ifdef{\@apropos}{{\small\color{emphasis}\@apropos\par}\vspace{3pt}}{}%
+    \vspace{2.5pt}%
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+    \ifdef{\@photodiameter}{%
+    \end{minipage}\par}{}%
+  \endgroup\vspace{1pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents (GESI)}
+
+% Profil adapté à l'offre IFPEN (Projet DCarbo / PEPR SPLEEN)
+\target{À la recherche d’un stage PFE de 6 mois dès février 2027 en Machine Learning appliqué à la décarbonation industrielle (Projet DCarbo).}
+\apropos{Double compétence en génie électrique (grandeurs triphasées, signaux, instrumentation) et en science des données (analyse de séries temporelles, AutoML, Python). Passionné par le soft sensing (NILM) et l’efficacité énergétique, je souhaite mettre mes compétences au service des projets de recherche d’IFPEN.}
+
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\makecvheader
+
+\cvsection{FORMATION}
+\cvevent{Étudiant en cycle d’ingénieur en Génie Électrique et Systèmes Intelligents}{École Marocaine des Sciences de l’Ingénieur - Marrakech}{2025 - Présent}{}
+{\footnotesize\color{emphasis}Techniques de l’IA (Machine Learning, Deep Learning), Traitement du signal, Systèmes embarqués, Smart Grids, Supervision industrielle \& Digital Twin, Smart capteurs, Audit \& Efficacité énergétique, Lean Management, Management \& Contrôle qualité, Hygiène, Sécurité \& Environnement (HSE), Gestion de projet...}\par\vspace{2.5pt}
+
+\cvevent{Licence SMP, option Automatique}{Faculté des Sciences Semlalia - Marrakech}{2020 - 2024}{}
+{\footnotesize\color{emphasis}Traitement du signal, Asservissements linéaires, Automatismes et capteurs, Électronique analogique, Régulation \& logique floue, Électromagnétisme...}\par
+
+\cvsection{EXPÉRIENCE}
+\cvevent{Stagiaire Bureau d’Études}{Core Engineering Solutions}{juil. - août 2026}{Berrchid, Casablanca}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Dimensionnement d’un poste HTA/BT et intégration d’une installation solaire PV en autoconsommation.
+  \item Réalisation de schémas unifilaires, bilans de puissance et notes de calcul (AutoCAD, Caneco BT, PVsyst).
+\end{itemize}
+\vspace{2pt}
+\cvevent{Stagiaire en Unité de Production}{Menara Prefa}{juil. 2024}{Marrakech}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Migration d’un automate industriel vers Siemens S7 sous TIA Portal, suivi de maintenance préventive/corrective.
+  \item Diagnostic des pannes électriques et analyse des variations des grandeurs sous régimes industriels réels.
+\end{itemize}
+
+\cvsection{PROJETS}
+{\normalsize\bfseries\color{accent} Maintenance Prédictive 4.0 par AutoML (TPOT vs. Auto-WEKA)}\par\vspace{1.5pt}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Analyse de séries temporelles IoT multi-capteurs et prétraitement de données industrielles déséquilibrées.
+  \item Extraction de features, benchmark génétique vs. bayésien et évaluation de robustesse (F1-score, Recall).
+\end{itemize}
+\vspace{2pt}
+{\normalsize\bfseries\color{accent} Détection d’anomalies Smartgrid (Clustering \& Séries Temporelles)}\par\vspace{1.5pt}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Segmentation de profils de consommation électrique IoT via KMeans, DBSCAN et modèles de mélanges (GMM).
+  \item Dashboard interactif pour l'identification des régimes anormaux et l'analyse de signatures électriques.
+\end{itemize}
+\vspace{2pt}
+{\normalsize\bfseries\color{accent} Precision Agriculture IoT Ecosystem (Arduino, LoRa, ESP32 \& TFLite)}\par\vspace{1.5pt}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Irrigation intelligente : nœuds capteurs (LoRa) et unité de décision (ESP32 + logique floue en temps réel).
+  \item Dashboard de monitoring et classification intelligente par modèle TensorFlow Lite embarqué.
+\end{itemize}
+
+\cvsection{COMPÉTENCES}
+\begin{tabular}{@{}ll@{}}
+\textbf{Data Science \& IA :} & Python (NumPy, Pandas, Scikit-learn), Séries temporelles, AutoML, TFLite \\[1.5pt]
+\textbf{Génie Électrique \& Signaux :} & Grandeurs triphasées, Caneco BT, PVsyst, Traitement du signal, Simulink \\[1.5pt]
+\textbf{Automatismes \& Embarqué :} & TIA Portal (Siemens S7), ESP32, Arduino, LoRa, Modbus RTU, Capteurs \\[1.5pt]
+\textbf{Compétences transversales :} & Rigueur scientifique, Esprit d'analyse, Travail pluridisciplinaire, Communication
+\end{tabular}
+
+\cvsection{CERTIFICATIONS}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item \textbf{Foundations of IoT Systems and Industrial Automation}~\hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{Sensors and Sensor Circuit Design}~\hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator}~\hfill {\color{emphasis}Dassault Systèmes}
+  \item \textbf{MATLAB / Simulink Onramp}~\hfill {\color{emphasis}MathWorks}
+\end{itemize}
+
+\cvsection{ACTIVITÉS \& ENGAGEMENT}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item \textbf{Hack The Intelligence (AISEC 2026) - 1\textsuperscript{er} Prix :} Développement d’un prototype Smart Agriculture IoT.
+  \item \textbf{Vision AI Competition (EMSI 2026) - 2\textsuperscript{ème} Prix :} Conception d’un système de traduction en langue des signes (ASL).
+  \item \textbf{Congrès COCIA’26 - Présentation Scientifique :} Conception du prototype d’éclairage piézoélectrique SmartStruct.
+  \item \textbf{Engagement Associatif \& Bénévolat (2025) :} Soutien scolaire et encadrement pédagogique d'enfants orphelins.
+  \item \textbf{Hackathon RallyIA (2026) - Participation :} Conception de l’architecture du projet "FindSpot" (Parking Intelligent).
+\end{itemize}
+
+\cvsection{LANGUES}
+\textbf{Arabe :} Langue maternelle~\hfill \textbf{Français :} DELF B2~\hfill \textbf{Anglais :} Professionnel
+
+\end{document}

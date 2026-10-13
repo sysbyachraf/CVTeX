@@ -1,0 +1,107 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2.2cm,bottom=2.0cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs identiques au CV ────────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{4pt}
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+  \endgroup\vspace{6pt}
+  {\color{heading}\rule{\linewidth}{1.2pt}}\par\vspace{8pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents (GESI)}
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\makecvheader
+
+% ── Destinataire ─────────────────────────────────────────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Madame Emmanuela TERTULIANO MOREIRA DE SOUSA} \\
+  Direction Expérimentation Procédés \\
+  \textbf{IFP Energies nouvelles (IFPEN) — Site de Lyon (Solaize)} \\
+  Projet DCarbo (PEPR SPLEEN) \\
+  Rond-point de l’échangeur de Solaize, BP 3, 69360 Solaize, France \\[8pt]
+  Fait à Marrakech, le \today
+\end{flushright}
+\vspace{4pt}
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+\noindent{\color{accent}\textbf{Objet :}} Candidature au stage de fin d'études (PFE) -- Machine Learning pour l'estimation de la consommation de vapeur industrielle à partir de la signature électrique (Projet DCarbo)
+
+\vspace{8pt}
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+\noindent Madame,
+
+\vspace{5pt}
+
+% ── MOI 1 : Profil, Formation & Socle Génie Électrique
+Élève-ingénieur en 5\textsuperscript{ème} année à l'EMSI Marrakech en Génie Électrique et Systèmes Intelligents (GESI), précédé d'une Licence en Automatique à la Faculté des Sciences Semlalia, je dispose d'une solide double culture alliant sciences électriques et ingénierie des données. Ma formation et mes expériences m'ont permis de maîtriser la physique des réseaux électriques triphasés (tensions, courants, puissances active et réactive, harmoniques) ainsi que les régimes de fonctionnement des équipements industriels, notamment à travers le dimensionnement d'installations HTA/BT chez \textit{Core Engineering Solutions} et la maintenance d'automates programmables chez \textit{Ménara Préfa}.
+
+\vspace{5pt}
+
+% ── MOI 2 : Expertise Machine Learning, Séries Temporelles & Projets
+En parallèle, j'ai développé une expertise pointue en science des données et en apprentissage automatique sous Python (NumPy, Pandas, Scikit-learn, Matplotlib). Lors de la conception d'un système de maintenance prédictive 4.0 par AutoML (TPOT vs. Auto-WEKA) appliqué à des signaux multi-capteurs industriels fortement déséquilibrés, j'ai assuré l'ensemble de la chaîne de traitement : analyse exploratoire et synchronisation de séries temporelles, extraction de caractéristiques temporelles et statistiques par fenêtrage, et évaluation rigoureuse de la robustesse des modèles (F1-score, Recall). De plus, mes travaux sur la détection d'anomalies sur réseaux Smartgrid (clustering KMeans, DBSCAN, GMM) m'ont aguerri à l'analyse fine des profils de consommation et des signatures énergétiques.
+
+\vspace{5pt}
+
+% ── VOUS : IFPEN, Projet DCarbo (PEPR SPLEEN) & Décarbonation
+C'est avec un très grand intérêt que j'ai relevé votre offre de stage au sein d'IFP Energies nouvelles sur le site de Solaize, dans le cadre du projet DCarbo (PEPR SPLEEN). La décarbonation des procédés industriels est un impératif stratégique, et votre démarche consistant à étendre les méthodes de \textit{Non-Intrusive Load Monitoring} (NILM) et d'analyse de signature électrique au \textit{soft sensing} de la consommation de vapeur constitue un défi méthodologique stimulant auquel mes compétences en modélisation électrique et en Machine Learning répondent parfaitement.
+
+\vspace{5pt}
+
+% ── NOUS : Synergie, Disponibilité PFE & Entretien
+Rejoindre IFPEN pour ce stage de fin d'études (PFE) de 6 mois dès février 2027 représente pour moi l'opportunité d'apporter ma rigueur scientifique, ma curiosité et mon aptitude naturelle au dialogue avec des experts interdisciplinaires. Mon niveau d'anglais professionnel me permettra par ailleurs de communiquer et documenter efficacement l'ensemble des résultats de recherche. 
+
+\vspace{5pt}
+
+Très motivé par cette opportunité, je serais honoré d'échanger avec votre équipe lors d'un prochain entretien afin de vous exposer en détail ma motivation et l'adéquation de mon profil avec les travaux du projet DCarbo.
+
+\vspace{6pt}
+
+Je vous prie d'agréer, Madame, l'expression de mes salutations distinguées.
+
+\vspace{12pt}
+
+\begin{flushright}
+  \large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

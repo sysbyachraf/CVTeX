@@ -1,0 +1,170 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+% Marges équilibrées pour 1 page complète
+\geometry{left=1.2cm,right=1.2cm,top=1.0cm,bottom=0.8cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\DisableLigatures{encoding=*, family=*} % ATS-fix: désactive les ligatures en pdfLaTeX
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={CV -- Achraf Izelmadene -- Candidature RTE},
+  pdfauthor={Achraf Izelmadene},
+  pdfsubject={Stage PFE Pilotage Portefeuille Postes Électriques HTB},
+  pdfkeywords={RTE, postes électriques, HTB, HTA, BT, réseaux électriques, gestion de projet, smart grid, Python}
+}
+
+% Photo avec diamètre réduit à 1.9cm et cadrage naturel
+\photo{1.9cm}{assets/imageee.png}
+
+% Style compact pour les sections
+\renewcommand{\cvsection}[2][]{%
+  \vspace{4pt}%
+  {\color{heading}\Large\bfseries #2 \hspace{0.2em}\leaders\vrule height 3pt depth -1.5pt\hfill\mbox{}}\par\vspace{3pt}
+}
+
+\renewcommand{\cvevent}[4]{%
+  {\normalsize\bfseries\color{accent}#1\par}\vspace{1pt}
+  \ifstrequal{#2}{}{}{%
+    {\small\itshape\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
+  }%
+  ~\hfill
+  \ifstrequal{#3}{}{}{{\small\color{emphasis}#3}}%
+  \par\vspace{2pt}
+}
+
+% Header fusionné avec À Propos
+\makeatletter
+\newcommand{\target}[1]{\def\@target{#1}}
+\newcommand{\apropos}[1]{\def\@apropos{#1}}
+
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \ifdef{\@photodiameter}{%
+    \begin{minipage}[c]{\@photodiameter}
+    \if@normalphoto
+      \includegraphics[width=\linewidth]{\@photo}
+    \else
+      \begin{tikzpicture}
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.04\linewidth) {\includegraphics[width=1.15\linewidth]{\@photo}};
+      \end{tikzpicture}
+    \fi%
+    \end{minipage}\hspace{1.2em}%
+    \begin{minipage}[c]{\dimexpr\linewidth-\@photodiameter-1.5em}}{}%
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{1.5pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{3pt}
+    \ifdef{\@target}{{\small\textbf{\@target}\par}\vspace{2pt}}{}%
+    \ifdef{\@apropos}{{\small\color{emphasis}\@apropos\par}\vspace{3pt}}{}%
+    \vspace{2.5pt}%
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+    \ifdef{\@photodiameter}{%
+    \end{minipage}\par}{}%
+  \endgroup\vspace{1pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents (GESI)}
+
+% Profil adapté à l'offre RTE (Postes HTB / Direction Technique Lyon)
+\target{À la recherche d’un stage PFE de 5 à 6 mois dès janvier-mars 2027 en pilotage de projets et postes électriques HTB (RTE).}
+\apropos{Double compétence en génie électrique (réseaux HTA/BT, postes de livraison, bilans de puissance) et en gestion de projets / outils décisionnels (certifié 3DEXPERIENCE, dashboards Python, analyse financière). Je souhaite apporter ma rigueur et mes compétences techniques au pilotage du portefeuille d’investissements HTB chez RTE.}
+
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\makecvheader
+
+\cvsection{FORMATION}
+\cvevent{Étudiant en cycle d’ingénieur en Génie Électrique et Systèmes Intelligents}{École Marocaine des Sciences de l’Ingénieur - Marrakech}{2025 - Présent}{}
+{\footnotesize\color{emphasis}Conception des installations électriques HTA/BT, Réseaux électriques \& Sécurité, Énergies renouvelables : production \& stockage, Smart Grids, Audit \& Efficacité énergétique, Électronique de puissance, Entraînement électrique à vitesse variable, Supervision industrielle \& Digital Twin, Hygiène, Sécurité \& Environnement (HSE), Lean Management, Management \& Contrôle qualité, Gestion de projet...}\par\vspace{2.5pt}
+
+\cvevent{Licence SMP, option Automatique}{Faculté des Sciences Semlalia - Marrakech}{2020 - 2024}{}
+{\footnotesize\color{emphasis}Électricité, Électronique analogique, Électromagnétisme, Asservissements linéaires, Automatismes et capteurs, Traitement du signal...}\par
+
+\cvsection{EXPÉRIENCE}
+\cvevent{Stagiaire Bureau d’Études}{Core Engineering Solutions}{juil. - août 2026}{Berrchid, Casablanca}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Dimensionnement complet d’un poste de livraison HTA/BT et bilan de puissance pour une zone industrielle.
+  \item Étude d’intégration PV en autoconsommation (PVsyst), schémas unifilaires, notes de calcul et DOE (AutoCAD, Caneco BT).
+\end{itemize}
+\vspace{2pt}
+\cvevent{Stagiaire en Unité de Production}{Menara Prefa}{juil. 2024}{Marrakech}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Participation à la migration d’un automate vers Siemens S7 (TIA Portal) et suivi des opérations de production.
+  \item Maintenance préventive et corrective sur lignes de production, suivi des indicateurs d’équipements.
+\end{itemize}
+
+\cvsection{PROJETS}
+{\normalsize\bfseries\color{accent} Détection d’anomalies Smartgrid (Clustering \& Séries Temporelles)}\par\vspace{1.5pt}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Analyse et partitionnement de profils de consommation électrique sur réseaux Smartgrids (KMeans, DBSCAN, GMM).
+  \item Développement d’un dashboard interactif (Python, Streamlit) pour le monitoring d’anomalies et l’aide à la décision.
+\end{itemize}
+\vspace{2pt}
+{\normalsize\bfseries\color{accent} SmartStruct : Éclairage Public Piézoélectrique (Energy Harvesting \& IoT)}\par\vspace{1.5pt}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Conception d’un système de récupération d’énergie pour l’éclairage public via dalles piézoélectriques connectées.
+  \item Prototype fonctionnel (PoC) sélectionné et présenté lors du congrès scientifique COCIA’26 (EST Casablanca).
+\end{itemize}
+\vspace{2pt}
+{\normalsize\bfseries\color{accent} Commande d’un Gradateur via Arduino et Simulink (Électronique de puissance)}\par\vspace{1.5pt}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item Modélisation sous Simulink et interfaçage Hardware-in-the-Loop (HIL) avec carte Arduino en temps réel.
+  \item Contrôle et régulation de puissance par pilotage précis de l’angle d’amorçage.
+\end{itemize}
+
+\cvsection{COMPÉTENCES}
+\begin{tabular}{@{}ll@{}}
+\textbf{Réseaux \& Bureau d’études :} & Postes HTA/BT, Bilans de puissance, Notes de calcul, Caneco BT, AutoCAD, PVsyst \\[1.5pt]
+\textbf{Gestion de Projet \& Outils :} & 3DEXPERIENCE (PLM/Gantt), Analyse financière (VAN, ROI), Pack Office / Excel, ProjectLibre \\[1.5pt]
+\textbf{Data, IA \& Automatisation :} & Python (Pandas, Scikit-learn, Streamlit), Dashboards, Modbus RTU, TIA Portal \\[1.5pt]
+\textbf{Compétences transversales :} & Rigueur d’analyse, Esprit de synthèse, Communication transversale, HSE \& Qualité
+\end{tabular}
+
+\cvsection{CERTIFICATIONS}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator}~\hfill {\color{emphasis}Dassault Systèmes}
+  \item \textbf{Foundations of IoT Systems and Industrial Automation}~\hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{Sensors and Sensor Circuit Design}~\hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{MATLAB / Simulink Onramp}~\hfill {\color{emphasis}MathWorks}
+\end{itemize}
+
+\cvsection{ACTIVITÉS \& ENGAGEMENT}
+\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]
+  \item \textbf{Hack The Intelligence (AISEC 2026) - 1\textsuperscript{er} Prix :} Développement d’un prototype Smart Agriculture IoT.
+  \item \textbf{Vision AI Competition (EMSI 2026) - 2\textsuperscript{ème} Prix :} Conception d’un système de traduction en langue des signes (ASL).
+  \item \textbf{Congrès COCIA’26 - Présentation Scientifique :} Conception du prototype d’éclairage piézoélectrique SmartStruct.
+  \item \textbf{Engagement Associatif \& Bénévolat (2025) :} Soutien scolaire et encadrement pédagogique d'enfants orphelins.
+\end{itemize}
+
+\cvsection{LANGUES}
+\textbf{Arabe :} Langue maternelle~\hfill \textbf{Français :} DELF B2~\hfill \textbf{Anglais :} Professionnel
+
+\end{document}

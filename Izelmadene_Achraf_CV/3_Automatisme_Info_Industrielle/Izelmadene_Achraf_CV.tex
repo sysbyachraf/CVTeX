@@ -1,0 +1,65 @@
+% !TEX TS-program = pdflatex
+% PROFIL 3 — AUTOMATISME & INFORMATIQUE INDUSTRIELLE (API, supervision, contrôle-commande, robotique)
+\documentclass[10pt,a4paper]{../altacv}
+\input{../cv_style.tex}
+\hypersetup{pdftitle={CV -- Achraf Izelmadene -- Automatisme \& Informatique Industrielle},
+  pdfkeywords={automatisme, API, Siemens S7, TIA Portal, Grafcet, Ladder, SCADA, supervision, régulation, stage PFE}}
+
+\begin{document}
+\cvidentite
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents (GESI)}
+\target{À la recherche d’un stage de fin d’études (PFE) de 6 mois dès février 2027 en automatisme, contrôle-commande ou informatique industrielle.}
+\apropos{Formé en automatique (Licence option Automatique) puis en génie électrique et systèmes intelligents, j’ai participé à la migration d’un automate vers Siemens S7 en milieu industriel. Intéressé par la programmation API, la supervision et la régulation de procédés dans un contexte Industrie 4.0.}
+\makecvheader
+
+\cvformation
+{Automatique \& Régulation industrielle, Représentation d’état, Réseaux locaux industriels, Supervision industrielle \& Digital Twin, Robotique industrielle, Smart capteurs \& actionneurs, Systèmes embarqués, Entraînement électrique à vitesse variable, Simulation des flux industriels, Industrie du futur, Lean Management, Hygiène, Sécurité \& Environnement (HSE), Gestion de projet...}
+{Asservissements linéaires, Automatismes et capteurs, Synthèse des correcteurs (régulation \& logique floue), Traitement du signal...}
+
+\cvsection{EXPÉRIENCE}
+\expmenara
+{Participation à la migration d’un automate vers Siemens S7 (TIA Portal) et suivi des opérations de production.}
+{Maintenance préventive et corrective sur lignes de production, mise à jour de la documentation technique.}
+\vspace{2pt}
+\expcore
+{Dimensionnement complet d’un poste de livraison HTA/BT et bilan de puissance pour une zone industrielle.}
+{Étude d’intégration PV en autoconsommation, schémas unifilaires et notes de calcul (AutoCAD, Caneco BT, PVsyst).}
+
+\cvsection{PROJETS}
+\cvprojet{Commande d’un Gradateur via Arduino et Simulink (Hardware-in-the-Loop)}
+\begin{cvitems}
+  \item Modélisation sous Simulink d’une commande de gradateur pilotée en temps réel par des données acquises sur Arduino.
+  \item Interfaçage HIL Simulink / Arduino et régulation de puissance par pilotage de l’angle d’amorçage.
+\end{cvitems}
+\vspace{2pt}
+\cvprojet{Precision Agriculture IoT Ecosystem (Contrôle-commande distribué)}
+\begin{cvitems}
+  \item Nœuds capteurs (Arduino Nano + LoRa) et unité centrale de décision (ESP32) commandant l’irrigation par logique floue.
+  \item Dashboard de monitoring temps réel ; projet lauréat du 1\textsuperscript{er} Prix Hack The Intelligence (AISEC 2026).
+\end{cvitems}
+\vspace{2pt}
+\cvprojet{Simulation d’un Bras Robotique Joueur d’Échecs (PyBullet)}
+\begin{cvitems}
+  \item Intégration d’un modèle 3D (URDF) de bras robotique dans le moteur physique PyBullet (Python).
+  \item Implémentation de la cinématique inverse pour atteindre des positions précises de l’échiquier (ex. case E4).
+\end{cvitems}
+
+\cvsection{COMPÉTENCES}
+\begin{tabular}{@{}ll@{}}
+\textbf{Automatismes :} & TIA Portal (Siemens S7), Automates Schneider, Ladder, Grafcet, Supervision SCADA / HMI \\[1.5pt]
+\textbf{Contrôle-commande :} & MATLAB / Simulink (HIL), Régulation industrielle, Variation de vitesse, Logique floue \\[1.5pt]
+\textbf{Réseaux \& Embarqué :} & Modbus RTU, LoRa, ESP32, Arduino, Capteurs industriels, C/C++, Python \\[1.5pt]
+\textbf{Outils :} & AutoCAD, SolidWorks, PyBullet, ISIS Proteus, Git, Gestion de projet
+\end{tabular}
+
+\cvsection{CERTIFICATIONS}
+\begin{cvitems}
+  \item \textbf{Foundations of IoT Systems and Industrial Automation}~\hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{MATLAB / Simulink Onramp}~\hfill {\color{emphasis}MathWorks}
+  \item \textbf{Sensors and Sensor Circuit Design}~\hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator}~\hfill {\color{emphasis}Dassault Systèmes}
+\end{cvitems}
+
+\cvactivites
+\cvlangues
+\end{document}
