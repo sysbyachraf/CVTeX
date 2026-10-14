@@ -7,7 +7,7 @@ Ce dossier regroupe les 6 profils cibles d'ingénierie GESI. Chaque sous-dossier
 - **`cv_style.tex`** : Fichier de style unique centralisant la mise en page, les couleurs, les marges, l'en-tête, les coordonnées, les langues et les activités. Toute modification de design faite ici s'applique automatiquement à tous les profils.
 - **`altacv.cls`** : Classe LaTeX AltaCV commune.
 
-## Les 6 Profils
+## Les 7 Profils
 
 | N° | Dossier | Profil Cible | Projets & Compétences Phares |
 |---|---|---|---|
@@ -17,6 +17,7 @@ Ce dossier regroupe les 6 profils cibles d'ingénierie GESI. Chaque sous-dossier
 | **4** | [`4_Maintenance_Fiabilite/`](4_Maintenance_Fiabilite/) | **Maintenance & Fiabilité** (maintenance prédictive, CND, Industrie 4.0) | AutoML TPOT vs Auto-WEKA (4★), Smartgrid (4★), Contrôle Qualité YOLOv8 (2★) |
 | **5** | [`5_Embarque_IoT_IIoT/`](5_Embarque_IoT_IIoT/) | **Systèmes Embarqués & IoT / IIoT** (firmware, LoRa, ESP32, capteurs) | Agriculture IoT (5★), Gradateur HIL (3★), SmartStruct IoT (2★) |
 | **6** | [`6_Data_IA_EdgeAI/`](6_Data_IA_EdgeAI/) | **Data Science, IA & Edge AI** (séries temporelles, TFLite, MLOps) | AutoML (4★), Smartgrid Clustering (4★), Traduction ASL TFLite (2★) |
+| **7** | [`7_Industrie40_TransitionDigitale/`](7_Industrie40_TransitionDigitale/) | **Industrie 4.0 & Transition Digitale** (innovation, maintenance prédictive, digital twin) | AutoML Prédictif (4★), Contrôle Qualité YOLOv8 (2★), Agriculture IoT (5★) |
 
 ## Comment postuler à une nouvelle offre ?
 
