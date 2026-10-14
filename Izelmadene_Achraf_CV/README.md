@@ -14,7 +14,7 @@ Ce dossier regroupe les 6 profils cibles d'ingénierie GESI. Chaque sous-dossier
 | **1** | [`1_Generaliste/`](1_Generaliste/) | **Généraliste GESI** (candidatures spontanées, offres mixtes) | Agriculture IoT (5★), AutoML (4★), Smartgrid (4★) |
 | **2** | [`2_Energie_Electrotechnique/`](2_Energie_Electrotechnique/) | **Énergie & Électrotechnique** (bureau d'études, HTA/BT, PV) | Smartgrid (4★), SmartStruct COCIA'26 (2★), Gradateur HIL (3★) |
 | **3** | [`3_Automatisme_Info_Industrielle/`](3_Automatisme_Info_Industrielle/) | **Automatisme & Informatique Industrielle** (API, supervision, SCADA) | Gradateur HIL Simulink (3★), Agriculture IoT (5★), Bras PyBullet (3★) |
-| **4** | [`4_Maintenance_Fiabilite/`](4_Maintenance_Fiabilite/) | **Maintenance & Fiabilité** (maintenance prédictive, CND, Industrie 4.0) | AutoML TPOT vs Auto-WEKA (4★), Smartgrid (4★), Contrôle Qualité YOLOv8 (2★) |
+| **4** | [`4_Maintenance_Fiabilite/`](4_Maintenance_Fiabilite/) | **Maintenance Industrielle, Prédictive & Fiabilité** | AutoML TPOT vs Auto-WEKA (4★), Smartgrid (4★), Contrôle Qualité YOLOv8 (2★) |
 | **5** | [`5_Embarque_IoT_IIoT/`](5_Embarque_IoT_IIoT/) | **Systèmes Embarqués & IoT / IIoT** (firmware, LoRa, ESP32, capteurs) | Agriculture IoT (5★), Gradateur HIL (3★), SmartStruct IoT (2★) |
 | **6** | [`6_Data_IA_EdgeAI/`](6_Data_IA_EdgeAI/) | **Data Science, IA & Edge AI** (séries temporelles, TFLite, MLOps) | AutoML (4★), Smartgrid Clustering (4★), Traduction ASL TFLite (2★) |
 | **7** | [`7_Industrie40_TransitionDigitale/`](7_Industrie40_TransitionDigitale/) | **Industrie 4.0 & Transition Digitale** (innovation, maintenance prédictive, digital twin) | AutoML Prédictif (4★), Contrôle Qualité YOLOv8 (2★), Agriculture IoT (5★) |
