@@ -1,0 +1,93 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.6cm,right=1.6cm,top=2.0cm,bottom=1.8cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs identiques au CV ────────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{4pt}
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+  \endgroup\vspace{5pt}
+  {\color{heading}\rule{\linewidth}{1.2pt}}\par\vspace{7pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents (GESI)}
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\makecvheader
+
+% ── Destinataire ─────────────────────────────────────────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de l'Équipe Recrutement}} \\[2pt]
+  \textbf{RTE — Réseau de Transport d’Électricité} \\
+  Pilotage du programme de maintenance — Région Ouest \\
+  44240 La Chapelle-sur-Erdre, France \\[6pt]
+  Fait à Marrakech, le \today
+\end{flushright}
+\vspace{4pt}
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+\noindent{\color{accent}\textbf{Objet :}} Candidature au stage -- Pilotage du programme d'activités et indicateurs de performance de la maintenance (Région Ouest)
+
+\vspace{8pt}
+
+\noindent Madame, Monsieur,
+
+\vspace{6pt}
+
+Élève-ingénieur en dernière année à l'EMSI Marrakech en Génie Électrique et Systèmes Intelligents (GESI), après une Licence en Automatique, je vous adresse ma candidature pour le stage proposé au sein de votre équipe de pilotage de la maintenance à La Chapelle-sur-Erdre. Ce poste réunit deux choses qui me motivent particulièrement : le réseau électrique et l'exploitation des données pour mieux organiser le travail des équipes.
+
+\vspace{6pt}
+
+Mon intérêt pour la maintenance s'est construit sur le terrain. Lors de mon stage d'un mois en unité de production chez \textit{Menara Prefa}, j'ai été sensibilisé aux procédures de maintenance préventive et corrective, j'ai participé au suivi des indicateurs d'équipements et à la mise à jour de la documentation technique. Plus récemment, mon stage en bureau d'études chez \textit{Core Engineering Solutions} (dimensionnement d'un poste de livraison HTA/BT, bilan de puissance, schémas unifilaires) m'a donné une meilleure compréhension des ouvrages électriques que vos équipes entretiennent. Ma formation complète ces expériences avec les modules Production et Maintenance, Lean Management, Management et contrôle qualité, Réseaux électriques et sécurité, ainsi que Gestion de projet.
+
+\vspace{6pt}
+
+Côté données, j'aime manipuler et analyser des informations pour en tirer des conclusions utiles. Dans un projet de détection d'anomalies sur des données de réseaux électriques, j'ai comparé plusieurs méthodes de clustering sous Python et réalisé un tableau de bord de visualisation des résultats. Dans un projet de maintenance prédictive, j'ai travaillé sur des données de capteurs (vibrations, température, pression) avec Pandas et Scikit-learn. Ces travaux m'ont appris à structurer des données, à choisir des indicateurs pertinents et à les présenter de façon lisible. Je souhaite mettre cette démarche au service du suivi de votre programme d'activités, tout en apprenant les méthodes et les outils propres à RTE.
+
+\vspace{6pt}
+
+Rigoureux, curieux et à l'aise en équipe, j'apprécie de comprendre un processus existant avant de proposer des améliorations. Disponible dès février 2027 pour une durée de 4 à 6 mois, je serais heureux d'échanger avec vous lors d'un entretien.
+
+\vspace{6pt}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{14pt}
+
+\begin{flushright}
+  \large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

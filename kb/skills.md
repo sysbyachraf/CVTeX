@@ -1,4 +1,4 @@
-﻿# Skills — Source de Vérité Unique
+# Skills — Source de Vérité Unique
 
 > Ce fichier fusionne `competences.md` et `logiciels.md`.
 > Il est la **seule source** pour toutes les compétences et logiciels d'Achraf Izelmadene.
@@ -42,7 +42,8 @@
 - Streamlit — dashboard Python
 - ProjectLibre — planification de projet, Gantt
 - Linux — ligne de commande, scripting
-- Pack Office — Word, Excel, PowerPoint
+- Pack Office / Excel — bilans, calculs techniques, suivi de données
+- Power BI — tableaux de bord, reporting, indicateurs de performance (KPIs)
 - LaTeX / Overleaf — rédaction technique
 
 ---

@@ -1,0 +1,97 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2.0cm,bottom=1.8cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs identiques au CV ────────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{4pt}
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+  \endgroup\vspace{5pt}
+  {\color{heading}\rule{\linewidth}{1.2pt}}\par\vspace{7pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents (GESI)}
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\makecvheader
+
+% ── Destinataire ─────────────────────────────────────────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de la Direction \& de l'Équipe Recrutement}} \\[2pt]
+  \textbf{SolarCare} \\
+  Rénovation \& Maintenance de Centrales Photovoltaïques BtoB \\
+  69100 Villeurbanne, France \\[6pt]
+  Fait à Marrakech, le \today
+\end{flushright}
+\vspace{4pt}
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+\noindent{\color{accent}\textbf{Objet :}} Candidature au stage de fin d'études (PFE) -- Maintenance, Exploitation \& Rénovation de Centrales Photovoltaïques BtoB
+
+\vspace{8pt}
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+\noindent Madame, Monsieur,
+
+\vspace{6pt}
+
+Acteur français en plein essor dédié à la pérennité et à la performance des toitures solaires BtoB, SolarCare incarne cette dynamique d'innovation et d'impact indispensable à la transition écologique. Élève-ingénieur en dernière année à l'EMSI Marrakech en Génie Électrique et Systèmes Intelligents (GESI), précédé d'une Licence en Automatique, je souhaite vivement rejoindre votre équipe à Villeurbanne pour seconder le Responsable Maintenance France dans l'exploitation technique de vos actifs photovoltaïques.
+
+\vspace{6pt}
+
+Mon cursus m'a apporté une compréhension intime du fonctionnement d'un générateur photovoltaïque (chaînes de modules, onduleurs, protections, raccordement HTA/BT) et des bilans de puissance. Lors de mon stage au bureau d'études \textit{Core Engineering Solutions}, j'ai réalisé l'étude d'intégration d'une centrale PV en autoconsommation (modélisation sous PVsyst, calcul de productible et schémas d'exécution unifilaires). De plus, mon expérience chez \textit{Ménara Préfa} en unité de production m'a initié aux exigences de la maintenance préventive/corrective, du diagnostic électrique et du suivi d'indicateurs de disponibilité. Cette double culture BE et terrain me rend rapidement autonome pour assurer le suivi de performance sur \textbf{ENERGYSOFT (S4E)}, détecter les pertes de production et orchestrer les interventions des techniciens dans le strict respect de la qualité et des délais.
+
+\vspace{6pt}
+
+Par ailleurs, mon appétence pour l'automatisation et l'ingénierie de données répond directement à votre besoin d'optimisation des outils internes (20\% du temps) : je maîtrise la création de \textbf{macros Excel (VBA)}, le reporting décisionnel sous \textbf{Power BI} ainsi que les technologies web (\textbf{HTML / JavaScript}) pour moderniser vos outils métiers. Lauréat du 1\textsuperscript{er} prix au hackathon d'innovation \textit{Hack The Intelligence} et certifié \textit{3DEXPERIENCE Collaborative Industry Innovator} par Dassault Systèmes, je possède l'agilité, la curiosité et la polyvalence requises pour m'investir avec efficacité sur vos sujets transversaux (optimisation achats, benchmark concurrents, appui direction) et appréhender la vision à 360° d'une PME en forte croissance.
+
+\vspace{6pt}
+
+Disponible dès **février 2027** pour une durée de 5 à 6 mois, je serais ravi de mettre mon enthousiasme, ma rigueur technique et ma force de proposition au service de l'ambition de SolarCare. Je me tiens à votre entière disposition pour convenir d'un entretien.
+
+\vspace{6pt}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{14pt}
+
+\begin{flushright}
+  \large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

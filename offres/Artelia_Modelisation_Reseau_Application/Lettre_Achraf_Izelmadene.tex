@@ -1,0 +1,101 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2.0cm,bottom=1.8cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs identiques au CV ────────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{4pt}
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+  \endgroup\vspace{5pt}
+  {\color{heading}\rule{\linewidth}{1.2pt}}\par\vspace{7pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents (GESI)}
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\makecvheader
+
+% ── Destinataire ─────────────────────────────────────────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de l'Équipe Systèmes et Réseaux Électriques (SRE)}} \\[2pt]
+  \textbf{Artelia} \\
+  Direction Énergie \& Systèmes Électriques \\
+  38130 Échirolles, France \\[6pt]
+  Fait à Marrakech, le \today
+\end{flushright}
+\vspace{4pt}
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+\noindent{\color{accent}\textbf{Objet :}} Candidature au stage de fin d'études (PFE) -- Ingénieur en Génie Électrique appliqué à la modélisation et l'optimisation des réseaux électriques (SRE)
+
+\vspace{7pt}
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+\noindent Madame, Monsieur,
+
+\vspace{5pt}
+
+Acteur d'ingénierie international de premier plan détenu à 100\% par ses salariés, Artelia conçoit des solutions durables et performantes face aux défis énergétiques mondiaux. Les missions de votre équipe Systèmes et Réseaux Électriques (SRE) à Échirolles — schémas directeurs, études de flux de charge et intégration des énergies renouvelables à l'international — correspondent exactement à mes aspirations d'ingénieur. Élève-ingénieur en 5\textsuperscript{ème} année à l'EMSI Marrakech en Génie Électrique et Systèmes Intelligents (GESI), titulaire d'une Licence en Automatique, je vous propose ma candidature pour ce stage de fin d'études de 6 mois dès février 2027.
+
+\vspace{5pt}
+
+Ma formation m'a permis d'acquérir une compréhension approfondie de la physique et de l'électrotechnique des réseaux : régime triphasé, transit de puissance, équilibre du plan de tension, calculs de court-circuit et contraintes d'exploitation (surcharges, sous-tensions). Lors de mon stage au bureau d'études \textit{Core Engineering Solutions}, j'ai pris en charge le dimensionnement complet d'un poste de livraison HTA/BT pour une zone industrielle, l'établissement de bilans de puissance, de notes de calcul de câbles et de schémas d'exécution unifilaires. Cette solide culture technique du réseau HTA me donne les repères nécessaires pour analyser la performance de réseaux de distribution, interpréter avec discernement les résultats de flux de charge et appréhender l'optimisation des points d'ouverture pour minimiser les pertes techniques.
+
+\vspace{5pt}
+
+En parallèle, j'ai développé une solide compétence en programmation \textbf{Python} (manipulation de structures de données, parsing automatisé, bibliothèques scientifiques NumPy et Pandas). Dans le cadre de mon projet sur les réseaux Smartgrid, j'ai conçu des algorithmes de traitement automatique de profils de charge et développé un dashboard interactif pour la détection d'anomalies de transit et le suivi d'indicateurs de performance. Très à l'aise avec la structuration de données techniques et les formats géographiques, je suis prêt à m'investir pleinement sur le code Python de conversion bidirectionnelle avec \textbf{QGIS}. Ma rigueur algorithmique me permettra en outre d'exploiter efficacement les interfaces Python de DIgSILENT PowerFactory pour automatiser le lancement des simulations, l'extraction des indicateurs et le reporting des études.
+
+\vspace{5pt}
+
+Rigoureux, autonome et force de proposition, je possède une réelle facilité à collaborer au sein d'une équipe pluridisciplinaire et à synthétiser des résultats techniques pour des clients ou des chefs de projet. Mon anglais professionnel me permettra par ailleurs d'intervenir sans réserve sur vos études à l'international (Afrique, Asie).
+
+\vspace{5pt}
+
+Rejoindre l'équipe SRE d'Artelia représente pour moi l'opportunité de concilier électrotechnique des réseaux et développement logiciel au service de projets énergétiques d'envergure. Je me tiens à votre entière disposition pour convenir d'un entretien.
+
+\vspace{5pt}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{12pt}
+
+\begin{flushright}
+  \large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}
