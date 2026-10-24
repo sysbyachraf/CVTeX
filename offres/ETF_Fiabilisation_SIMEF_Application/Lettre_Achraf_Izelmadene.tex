@@ -1,0 +1,89 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.8cm,right=1.8cm,top=1.8cm,bottom=1.8cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs identiques au CV ────────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% ── Espacement entre les paragraphes et interligne aéré ──────────────────────
+\setlength{\parskip}{7.5pt}
+\linespread{1.14}\selectfont
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{3.5pt}
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+  \endgroup\vspace{4pt}
+  {\color{heading}\rule{\linewidth}{1.2pt}}\par\vspace{8pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\makecvheader
+
+% ── Destinataire épuré ───────────────────────────────────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention du Service Recrutement}} \\[2pt]
+  \textbf{ETF — Agence Maintenance Matériel (AMM)} \\[8pt]
+  Marrakech, le \today
+\end{flushright}
+\vspace{4pt}
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+\noindent{\color{accent}\textbf{Objet :}} Candidature au stage PFE -- Ingénieur Fiabilisation Équipement (Postes SIMEF)
+
+\vspace{6pt}
+
+\noindent Madame, Monsieur,
+
+Acteur de référence dans la construction et la maintenance des infrastructures ferroviaires, ETF assure au quotidien la disponibilité et la sécurité d’engins spécialisés essentiels au réseau. Au sein de votre Agence Maintenance Matériel (AMM) à Beauchamp, la fiabilisation et le déploiement des cartes programmes pour les deux postes SIMEF, dédiés aux essais des systèmes de freinage, représentent un enjeu technique et réglementaire majeur auquel je souhaite vivement contribuer.
+
+Élève-ingénieur en dernière année à l'École Marocaine des Sciences de l'Ingénieur (EMSI Marrakech) en Génie Électrique et Systèmes Intelligents, après une Licence en Automatique, j'ai acquis de solides compétences en maintenance industrielle, asservissements et contrôle des équipements. Mon parcours allie rigueur théorique et expérience concrète des ateliers de production.
+
+Lors de mon stage chez \textit{Menara Prefa}, j'ai participé aux opérations de maintenance préventive et corrective sur des lignes automatisées, au suivi des indicateurs d'équipements et à la migration d'automate sous Siemens TIA Portal. Cette immersion m'a permis de comprendre l'importance d'une traçabilité rigoureuse, de la mise à jour de la documentation technique et de la transmission de modes opératoires clairs auprès des équipes de maintenance. 
+
+De plus, dans le cadre de mes projets académiques, j'ai conduit l'étude complète d'un système de contrôle qualité et banc d'inspection automatisé, intégrant la rédaction du cahier des charges, l'analyse des risques (AMDEC) et l'évaluation budgétaire du projet (calcul de rentabilité, VAN et ROI). Cette démarche méthodique me permettra de m'investir avec efficacité dans l'étude des normes de freinage ferroviaire, le suivi du déploiement des cartes programmes et l'optimisation des contrôles sur vos bancs SIMEF.
+
+Rejoindre votre agence pour ce stage de fin d'études de six mois dès février 2027 constitue pour moi une opportunité privilégiée de mettre ma curiosité technique, ma rigueur et mon esprit d'équipe au service de vos ateliers.
+
+Très motivé à l'idée d'intégrer vos équipes, je me tiens à votre entière disposition pour convenir d'un entretien afin de vous exposer de vive voix mes motivations.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{16pt}
+
+\begin{flushright}
+  \large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

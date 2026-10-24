@@ -1,0 +1,67 @@
+% !TEX TS-program = pdflatex
+% PROFIL 10 — AUTOMATIQUE & SYSTÈMES ASSERVIS
+\documentclass[10pt,a4paper]{../altacv}
+\input{../cv_style.tex}
+\hypersetup{pdftitle={CV -- Achraf Izelmadene -- Automatique \& Systèmes Asservis},
+  pdfkeywords={automatique, systèmes asservis, régulation, PID, retour d'état, Simulink, MATLAB, HIL, servomécanismes, stage PFE}}
+
+\begin{document}
+\cvidentite
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\target{À la recherche d’un stage de fin d’études (PFE) de 6 mois dès février 2027 en automatique, systèmes asservis ou régulation.}
+\apropos{Diplômé d’une Licence en Automatique et élève ingénieur GESI, je combine une solide assise théorique en asservissements (stabilité, synthèse PID, représentation d’état, logique floue) et des compétences pratiques en modélisation MATLAB/Simulink (HIL), régulation industrielle et commande d’actionneurs.}
+\makecvheader
+
+\cvformation
+{Automatique 2 (Régulation industrielle, Représentation d’état), Entraînement électrique à vitesse variable, Smart capteurs \& actionneurs, Robotique industrielle, Convertisseurs de puissance, Systèmes embarqués, Supervision industrielle \& Digital Twin...}
+{Licence SMP option Automatique : Asservissements linéaires, Synthèse des correcteurs (P/PI/PID, avance/retard de phase), Logique floue, Automatismes et capteurs, Traitement du signal, Électronique analogique...}
+
+\cvsection{EXPÉRIENCE}
+\expmenara
+{Suivi et fiabilisation des boucles d’asservissement sur variateurs de vitesse et actionneurs de production.}
+{Participation à la migration d’un automate vers Siemens S7 (TIA Portal) et réglage des paramètres de régulation.}
+\vspace{2pt}
+\expcore
+{Dimensionnement complet d’un poste de livraison HTA/BT, calculs de câbles, protections et bilan de puissance.}
+{Schémas d’exécution unifilaires et notes de calcul de distribution (Caneco BT, AutoCAD, PVsyst).}
+
+\cvsection{PROJETS}
+\cvprojet{Commande d’un Gradateur via Arduino et Simulink (Boucle Fermée \& HIL)}
+\begin{cvitems}
+  \item Modélisation sous Simulink d’une boucle de régulation de puissance asservie en temps réel via carte Arduino.
+  \item Interfaçage Hardware-in-the-Loop (HIL) et contrôle de l’angle d’amorçage pour stabiliser la réponse dynamique.
+\end{cvitems}
+\vspace{2pt}
+\cvprojet{Simulation d’un Bras Robotique Joueur d’Échecs (Cinématique \& Asservissement)}
+\begin{cvitems}
+  \item Modélisation de la chaîne cinématique d’un bras (URDF) dans le moteur physique PyBullet sous Python.
+  \item Implémentation algorithmique de la cinématique inverse (IK) pour l’asservissement de positionnement spatial des axes.
+\end{cvitems}
+\vspace{2pt}
+\cvprojet{Voiture Robotisée Autonome (Asservissement PWM \& Servomécanisme)}
+\begin{cvitems}
+  \item Asservissement de vitesse des moteurs DC par modulation PWM (pont en H) et contrôle de trajectoire par servomoteur.
+  \item Boucle de régulation temps réel avec conditionnement de signaux ultrasoniques pour le contournement d’obstacles.
+\end{cvitems}
+
+\cvsection{COMPÉTENCES}
+{\small
+\begin{tabular}{@{}ll@{}}
+\textbf{Systèmes Asservis \& Régulation :} & Asservissements linéaires, Correcteurs PID, Avance/retard, Représentation d'état, Logique floue \\[1.5pt]
+\textbf{Modélisation \& Simulation :} & MATLAB / Simulink, Control System Toolbox, Hardware-in-the-Loop (HIL), PyBullet \\[1.5pt]
+\textbf{Actionneurs \& Électronique :} & Variateurs de vitesse, Servomoteurs, Moteurs DC, AOP, Conditionnement capteurs, Proteus \\[1.5pt]
+\textbf{Qualités personnelles :} & Rigueur mathématique, Esprit d'analyse, Travail en équipe, Curiosité scientifique
+\end{tabular}
+}
+
+\cvsection{CERTIFICATIONS}
+\begin{cvitems}
+  \item \textbf{MATLAB / Simulink Onramp}~\hfill {\color{emphasis}MathWorks}
+  \item \textbf{Sensors and Sensor Circuit Design}~\hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{Foundations of IoT Systems and Industrial Automation}~\hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator}~\hfill {\color{emphasis}Dassault Systèmes}
+\end{cvitems}
+
+\cvactivites
+\cvlangues
+\end{document}

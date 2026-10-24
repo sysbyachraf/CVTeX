@@ -1,0 +1,89 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.8cm,right=1.8cm,top=1.8cm,bottom=1.8cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs identiques au CV ────────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% ── Espacement entre les paragraphes et interligne aéré ──────────────────────
+\setlength{\parskip}{7.5pt}
+\linespread{1.14}\selectfont
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\LARGE\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{3.5pt}
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+  \endgroup\vspace{4pt}
+  {\color{heading}\rule{\linewidth}{1.2pt}}\par\vspace{8pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\makecvheader
+
+% ── Destinataire épuré ───────────────────────────────────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de la Direction Technique et Projets}} \\[2pt]
+  \textbf{Intercontrôle — R\&D Transverse} \\[8pt]
+  Marrakech, le \today
+\end{flushright}
+\vspace{4pt}
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+\noindent{\color{accent}\textbf{Objet :}} Candidature au stage PFE -- Contrôle-commande et robotique d'inspection en milieu nucléaire
+
+\vspace{6pt}
+
+\noindent Madame, Monsieur,
+
+Référence mondiale des contrôles non destructifs et de l'inspection robotisée de composants nucléaires, Intercontrôle conçoit des solutions d'une précision et d'une fiabilité exceptionnelles. Le sujet proposé au sein de votre Direction Technique et Projets — dédié au contrôle-commande d'un robot d'inspection en tubulure multicontrainte, à l'intégration de capteurs sur module dynamique et au recalage en temps réel — correspond précisément à mes compétences en robotique, asservissements, électronique embarquée et développement logiciel.
+
+Élève-ingénieur en dernière année à l'École Marocaine des Sciences de l'Ingénieur (EMSI Marrakech) en Génie Électrique et Systèmes Intelligents, après une Licence en Automatique à la Faculté des Sciences Semlalia, je dispose d'un socle scientifique solide en automatique continue et discrète, asservissements linéaires, régulation d'état et robotique industrielle.
+
+Passionné par la modélisation et le contrôle des systèmes dynamiques, j'ai notamment travaillé sur la cinématique et le contrôle d'un bras robotique sous Python avec le moteur physique PyBullet à partir de modèles URDF, implémentant des algorithmes de cinématique inverse pour le positionnement précis d'effecteurs. Habitué aux environnements Linux et Linux embarqué, je pratique régulièrement la programmation en Python et en C/C++, et je m'intéresse de près à l'écosystème ROS 2 pour la structuration modulaire des flux de données de capteurs et d'actionneurs.
+
+Par ailleurs, mes projets m'ont permis d'aborder concrètement l'interfaçage hardware-software et les essais sur prototype. Dans le cadre d'un banc de régulation Hardware-in-the-Loop (HIL) associant Arduino et Simulink, j'ai assuré l'acquisition en temps réel et le pilotage d'organes de puissance. Lors de la conception d'un écosystème connecté de contrôle distribué (lauréat du 1\textsuperscript{er} Prix Hack The Intelligence 2026), j'ai intégré divers capteurs physiques et codé des règles de commande sous contraintes. Ces expériences m'ont apporté la rigueur d'expérimentation nécessaire pour mener des campagnes d'essais sur vos prototypes et optimiser l'intégration des capteurs.
+
+Rejoindre votre équipe R\&D pour ce stage de fin d'études de six mois dès février 2027 serait pour moi une formidable occasion de confronter mes compétences aux exigences du secteur nucléaire, tout en apportant ma rigueur, ma curiosité multidisciplinaire et mon esprit d'équipe.
+
+Très motivé par cette mission au cœur de l'innovation robotique, je me tiens à votre disposition pour convenir d'un entretien afin de vous exposer mes motivations de vive voix.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{16pt}
+
+\begin{flushright}
+  \large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

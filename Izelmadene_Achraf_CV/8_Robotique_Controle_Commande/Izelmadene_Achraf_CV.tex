@@ -1,0 +1,67 @@
+% !TEX TS-program = pdflatex
+% PROFIL 8 — ROBOTIQUE, MÉCATRONIQUE & CONTRÔLE-COMMANDE
+\documentclass[10pt,a4paper]{../altacv}
+\input{../cv_style.tex}
+\hypersetup{pdftitle={CV -- Achraf Izelmadene -- Robotique, Mécatronique \& Contrôle-Commande},
+  pdfkeywords={robotique, mécatronique, contrôle-commande, cinématique inverse, PyBullet, URDF, ROS, Python, C++, stage PFE}}
+
+\begin{document}
+\cvidentite
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\target{À la recherche d’un stage de fin d’études (PFE) de 6 mois dès février 2027 en robotique, mécatronique ou contrôle-commande.}
+\apropos{Élève ingénieur en systèmes intelligents, passionné par la modélisation cinématique, l’asservissement de robots et l’interfaçage mécatronique. Compétences en simulation (PyBullet, URDF), cinématique inverse (IK), contrôle temps réel Hardware-in-the-Loop et développement sous Linux en Python et C/C++.}
+\makecvheader
+
+\cvformation
+{Robotique industrielle, Automatique \& Régulation industrielle, Systèmes embarqués, Smart capteurs \& actionneurs, Supervision industrielle \& Digital Twin, Électronique de puissance, Traitement du signal, Lean Management, Gestion de projet...}
+{Asservissements linéaires, Automatismes et capteurs, Synthèse des correcteurs (régulation \& logique floue), Traitement du signal...}
+
+\cvsection{EXPÉRIENCE}
+\expmenara
+{Participation à la migration d’un automate vers Siemens S7 (TIA Portal) et suivi des opérations de production.}
+{Maintenance préventive et corrective sur lignes de production, mise à jour de la documentation technique.}
+\vspace{2pt}
+\expcore
+{Dimensionnement complet d’un poste de livraison HTA/BT et bilan de puissance pour une zone industrielle.}
+{Étude d’intégration PV en autoconsommation, schémas unifilaires et notes de calcul (AutoCAD, Caneco BT, PVsyst).}
+
+\cvsection{PROJETS}
+\cvprojet{Simulation d’un Bras Robotique Joueur d’Échecs (PyBullet \& URDF)}
+\begin{cvitems}
+  \item Modélisation et interfaçage d’un modèle 3D (URDF) de bras robotique dans le moteur physique PyBullet (Python).
+  \item Implémentation algorithmique de la cinématique inverse (IK) pour le positionnement précis d’effecteurs spatiaux.
+\end{cvitems}
+\vspace{2pt}
+\cvprojet{Commande d’un Gradateur via Arduino et Simulink (Hardware-in-the-Loop)}
+\begin{cvitems}
+  \item Modélisation sous Simulink d’une régulation temps réel pilotée par des données acquises sur carte Arduino.
+  \item Interfaçage HIL Simulink / Arduino et asservissement en boucle fermée pour le pilotage d’organes de puissance.
+\end{cvitems}
+\vspace{2pt}
+\cvprojet{Voiture Robotisée Autonome (Électronique \& Évitement d’obstacles)}
+\begin{cvitems}
+  \item Conception et assemblage : commande de moteurs DC via pont en H et direction par servomoteur sur Arduino.
+  \item Implémentation d’un algorithme autonome d’évitement d’obstacles par capteur ultrasonique temps réel.
+\end{cvitems}
+
+\cvsection{COMPÉTENCES}
+{\small
+\begin{tabular}{@{}ll@{}}
+\textbf{Robotique \& Mécatronique :} & Cinématique inverse (IK), Modélisation URDF, PyBullet, Moteurs DC, Servomoteurs \\[1.5pt]
+\textbf{Contrôle-commande :} & MATLAB / Simulink (HIL), Asservissements linéaires, Régulation, TIA Portal \\[1.5pt]
+\textbf{Développement \& Outils :} & Python, C/C++, Capteurs industriels, Linux embarqué, Arduino, Git, Proteus \\[1.5pt]
+\textbf{Qualités personnelles :} & Travail d’équipe, Rigueur \& assiduité, Esprit d’initiative, Curiosité technique
+\end{tabular}
+}
+
+\cvsection{CERTIFICATIONS}
+\begin{cvitems}
+  \item \textbf{Sensors and Sensor Circuit Design}~\hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{Foundations of IoT Systems and Industrial Automation}~\hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{MATLAB / Simulink Onramp}~\hfill {\color{emphasis}MathWorks}
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator}~\hfill {\color{emphasis}Dassault Systèmes}
+\end{cvitems}
+
+\cvactivites
+\cvlangues
+\end{document}

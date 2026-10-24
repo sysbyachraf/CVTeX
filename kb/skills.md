@@ -41,7 +41,7 @@
 - Arduino IDE — programmation embarquée
 - Streamlit — dashboard Python
 - ProjectLibre — planification de projet, Gantt
-- Linux — ligne de commande, scripting
+- Linux / Linux embarqué — ligne de commande, scripting, environnement de développement
 - Pack Office / Excel — bilans, calculs techniques, suivi de données
 - Power BI — tableaux de bord, reporting, indicateurs de performance (KPIs)
 - LaTeX / Overleaf — rédaction technique

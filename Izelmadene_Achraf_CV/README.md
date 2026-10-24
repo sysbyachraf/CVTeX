@@ -7,7 +7,7 @@ Ce dossier regroupe les 6 profils cibles d'ingénierie GESI. Chaque sous-dossier
 - **`cv_style.tex`** : Fichier de style unique centralisant la mise en page, les couleurs, les marges, l'en-tête, les coordonnées, les langues et les activités. Toute modification de design faite ici s'applique automatiquement à tous les profils.
 - **`altacv.cls`** : Classe LaTeX AltaCV commune.
 
-## Les 7 Profils
+## Les 12 Profils
 
 | N° | Dossier | Profil Cible | Projets & Compétences Phares |
 |---|---|---|---|
@@ -18,6 +18,11 @@ Ce dossier regroupe les 6 profils cibles d'ingénierie GESI. Chaque sous-dossier
 | **5** | [`5_Embarque_IoT_IIoT/`](5_Embarque_IoT_IIoT/) | **Systèmes Embarqués & IoT / IIoT** (firmware, LoRa, ESP32, capteurs) | Agriculture IoT (5★), Gradateur HIL (3★), SmartStruct IoT (2★) |
 | **6** | [`6_Data_IA_EdgeAI/`](6_Data_IA_EdgeAI/) | **Data Science, IA & Edge AI** (séries temporelles, TFLite, MLOps) | AutoML (4★), Smartgrid Clustering (4★), Traduction ASL TFLite (2★) |
 | **7** | [`7_Industrie40_TransitionDigitale/`](7_Industrie40_TransitionDigitale/) | **Industrie 4.0 & Transition Digitale** (innovation, maintenance prédictive, digital twin) | AutoML Prédictif (4★), Contrôle Qualité YOLOv8 (2★), Agriculture IoT (5★) |
+| **8** | [`8_Robotique_Controle_Commande/`](8_Robotique_Controle_Commande/) | **Robotique, Mécatronique & Contrôle-Commande** (PyBullet, URDF, cinématique inverse) | Bras PyBullet (3★), Gradateur HIL (3★), Robot Évitement d'obstacles (2★) |
+| **9** | [`9_Electronique_Puissance/`](9_Electronique_Puissance/) | **Électronique & Électronique de Puissance** (convertisseurs, gradateurs, HIL, Proteus) | Gradateur HIL Simulink (3★), SmartStruct COCIA'26 (2★), Voiture PWM Pont en H (2★) |
+| **10** | [`10_Automatique_Systemes_Asservis/`](10_Automatique_Systemes_Asservis/) | **Automatique, Systèmes Asservis & Régulation** (boucle fermée, PID, HIL, dynamique) | Gradateur HIL Simulink (3★), Bras Robotique IK (3★), Voiture PWM Servomoteur (2★) |
+| **11** | [`11_Ingenierie_Systemes_Electriques/`](11_Ingenierie_Systemes_Electriques/) | **Ingénierie Systèmes Électriques & MBSE** (SysML, Cycle en V, architecture HTA/BT) | FindSpot SysML (1★), SmartStruct COCIA'26 (2★), Gradateur HIL (3★) |
+| **12** | [`12_Embarque_EdgeAI_MachineLearning/`](12_Embarque_EdgeAI_MachineLearning/) | **Systèmes Embarqués, Edge AI & Machine Learning** (ESP32, TFLite, TinyML, C++/Python) | Agriculture IoT (5★), Traduction ASL TFLite (2★), AutoML Prédictif (4★) |
 
 ## Comment postuler à une nouvelle offre ?
 

@@ -1,0 +1,158 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.2cm,right=1.2cm,top=0.8cm,bottom=0.6cm,footskip=0pt}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\DisableLigatures{encoding=*, family=*} % Désactive les ligatures pour compatibilité ATS maximale
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{555555}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={CV -- Achraf Izelmadene -- Candidature ETF VINCI Construction},
+  pdfauthor={Achraf Izelmadene},
+  pdfsubject={Stage PFE Ingénieur Fiabilisation Équipement SIMEF},
+  pdfkeywords={ETF, VINCI, SIMEF, freinage, fiabilisation, maintenance industrielle, TIA Portal, AMDEC, stage PFE}
+}
+
+% ── Style sections compactes ─────────────────────────────────────────
+\renewcommand{\cvsection}[2][]{%
+  \vspace{3pt}%
+  {\color{heading}\Large\bfseries #2 \hspace{0.2em}\leaders\vrule height 3pt depth -1.5pt\hfill\mbox{}}\par\vspace{2.5pt}
+}
+
+\renewcommand{\cvevent}[4]{%
+  {\normalsize\bfseries\color{accent}#1\par}\vspace{1pt}
+  \ifstrequal{#2}{}{}{%
+    {\small\itshape\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
+  }%
+  ~\hfill
+  \ifstrequal{#3}{}{}{{\small\color{emphasis}#3}}%
+  \par\vspace{2pt}
+}
+
+\newenvironment{cvitems}{\begin{itemize}[leftmargin=*, label=\textbullet, nosep, itemsep=1.5pt]}{\end{itemize}}
+\newcommand{\cvprojet}[1]{{\normalsize\bfseries\color{accent} #1}\par\vspace{1.5pt}}
+
+% ── En-tête ATS centré + rubrique À PROPOS ───────────────────────────
+\makeatletter
+\newcommand{\target}[1]{\def\@target{#1}}
+\newcommand{\apropos}[1]{\def\@apropos{#1}}
+
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \centering\color{emphasis}%
+    {\LARGE\bfseries\@name\par}\vspace{2.5pt}
+    {\normalsize\bfseries\color{accent}\@tagline\par}\vspace{3.5pt}
+    {\footnotesize\color{emphasis}\@personalinfo\par}
+  \endgroup\par\vspace{2pt}
+  \ifboolexpr{test {\ifdef{\@target}} or test {\ifdef{\@apropos}}}{%
+    \cvsection{À PROPOS}
+    \ifdef{\@target}{{\small\textbf{\@target}\par}\vspace{2pt}}{}%
+    \ifdef{\@apropos}{{\small\color{emphasis}\@apropos\par}}{}%
+  }{}%
+  \vspace{1pt}
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  +212699098736%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Marrakech, Maroc (Mobilité géographique)%
+  \hspace{0.9em}\textcolor{body!60}{|}\hspace{0.9em}%
+  Permis B%
+}
+
+\target{Stage de fin d’études (PFE) de 6 mois dès février 2027 : Ingénieur Fiabilisation Équipement chez ETF (AMM).}
+\apropos{Élève ingénieur en dernière année, orienté fiabilité des systèmes industriels, automatisme et contrôle. Expérience terrain en unité de production (maintenance préventive/corrective, migration automate TIA Portal) et méthodologie d’industrialisation (cahier des charges, analyse des risques AMDEC, instrumentation, suivi budgétaire).}
+
+\makecvheader
+
+\cvsection{FORMATION}
+\cvevent{Étudiant en cycle d’ingénieur en Génie Électrique et Systèmes Intelligents}{École Marocaine des Sciences de l’Ingénieur - Marrakech}{2025 - Présent}{}
+{\footnotesize\color{emphasis}Production \& Maintenance (préventive \& prédictive), Lean Management, Management \& Contrôle qualité, Hygiène, Sécurité \& Environnement (HSE), Supervision industrielle \& Digital Twin, Smart capteurs \& actionneurs, Régulation industrielle, Gestion de projet...}\par\vspace{2.5pt}
+\cvevent{Licence SMP, option Automatique}{Faculté des Sciences Semlalia - Marrakech}{2020 - 2024}{}
+{\footnotesize\color{emphasis}Asservissements linéaires, Automatismes et capteurs, Traitement du signal, Électronique analogique...}\par
+
+\cvsection{EXPÉRIENCE}
+\cvevent{Stagiaire en Unité de Production}{Menara Prefa}{juil. 2024}{Marrakech}
+\begin{cvitems}
+  \item Maintenance préventive et corrective sur lignes automatisées, suivi des indicateurs d’équipements et de disponibilité.
+  \item Participation à la migration d’un automate vers Siemens S7 (TIA Portal) et mise à jour de la documentation technique.
+\end{cvitems}
+\vspace{2pt}
+\cvevent{Stagiaire Bureau d’Études}{Core Engineering Solutions}{juil. - août 2026}{Berrchid, Casablanca}
+\begin{cvitems}
+  \item Dimensionnement complet d’un poste de livraison HTA/BT, bilan de puissance et conformité aux normes techniques.
+  \item Étude d’intégration PV en autoconsommation, schémas unifilaires et notes de calcul (AutoCAD, Caneco BT, PVsyst).
+\end{cvitems}
+
+\cvsection{PROJETS}
+\cvprojet{Contrôle Qualité Intelligent \& Banc d’Inspection (Vision \& Électronique Industrielle)}
+\begin{cvitems}
+  \item Étude complète d’un système d’inspection automatisée : cahier des charges, analyse des risques (AMDEC) et instrumentation.
+  \item Dimensionnement financier du projet (calcul de VAN, ROI, budget) et rédaction des modes opératoires de contrôle.
+\end{cvitems}
+\vspace{2pt}
+\cvprojet{Maintenance Prédictive 4.0 par AutoML (TPOT vs. Auto-WEKA)}
+\begin{cvitems}
+  \item Détection anticipée de défaillances sur données capteurs (vibrations, température, pression) et benchmark F1-score/Recall.
+  \item Définition de seuils critiques d’alerte complétée par une étude CND (Contrôle Non Destructif) par analyse d’huile.
+\end{cvitems}
+\vspace{2pt}
+\cvprojet{Détection d’anomalies Smartgrid (Clustering \& Supervision)}
+\begin{cvitems}
+  \item Benchmark d’algorithmes de clustering (KMeans, DBSCAN, GMM) sur des flux de données IoT de réseaux électriques.
+  \item Dashboard interactif de visualisation des clusters pour le monitoring d’anomalies et l’optimisation des contrôles.
+\end{cvitems}
+
+\cvsection{COMPÉTENCES}
+{\small
+\begin{tabular}{@{}ll@{}}
+\textbf{Maintenance \& Fiabilité :} & Préventive \& corrective, Indicateurs (MTBF/MTTR), AMDEC, CND, Modes opératoires \\[1.5pt]
+\textbf{Automatisme \& Équipements :} & TIA Portal, Bancs de test, Ladder, Grafcet, SCADA / HMI, Modbus RTU, Caneco BT \\[1.5pt]
+\textbf{Outils, Budget \& Data :} & Suivi budgétaire (VAN/ROI), Excel (suivi \& calculs), Power BI, Python (Pandas), Pack Office \\[1.5pt]
+\textbf{Qualités personnelles :} & Travail d’équipe, Rigueur \& ponctualité, Esprit d’entreprendre, Curiosité technique
+\end{tabular}
+}
+
+\cvsection{CERTIFICATIONS}
+\begin{cvitems}
+  \item \textbf{Foundations of IoT Systems and Industrial Automation}~\hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{Sensors and Sensor Circuit Design}~\hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator}~\hfill {\color{emphasis}Dassault Systèmes}
+  \item \textbf{MATLAB / Simulink Onramp}~\hfill {\color{emphasis}MathWorks}
+\end{cvitems}
+
+\cvsection{ACTIVITÉS \& ENGAGEMENT}
+\begin{cvitems}
+  \item \textbf{Hack The Intelligence (AISEC 2026) - 1\textsuperscript{er} Prix :} Développement d’un prototype Smart Agriculture IoT.
+  \item \textbf{Vision AI Competition (EMSI 2026) - 2\textsuperscript{ème} Prix :} Système de traduction en langue des signes (ASL).
+  \item \textbf{Congrès COCIA’26 - Présentation Scientifique :} Prototype d’éclairage public piézoélectrique SmartStruct.
+  \item \textbf{Engagement Associatif \& Bénévolat (2025) :} Soutien scolaire et encadrement pédagogique d’enfants orphelins.
+\end{cvitems}
+
+\cvsection{LANGUES}
+\textbf{Arabe :} Langue maternelle~\hfill \textbf{Français :} DELF B2~\hfill \textbf{Anglais :} Professionnel
+
+\end{document}
