@@ -12,13 +12,10 @@ from dotenv import load_dotenv
 
 load_dotenv(Path(__file__).parent / ".env")
 
-# Optimization guide texts (located in docs/)
+# Optimization guide texts
 _GUIDES_DIR = Path(__file__).parent.parent
-_DOCS_DIR   = _GUIDES_DIR / "docs"
-_CV_FILE    = (_DOCS_DIR / "optimisation_cv.md") if (_DOCS_DIR / "optimisation_cv.md").exists() else (_GUIDES_DIR / "optimisation_cv.md")
-_LTR_FILE   = (_DOCS_DIR / "optimisation_lettre.md") if (_DOCS_DIR / "optimisation_lettre.md").exists() else (_GUIDES_DIR / "optimisation_lettre.md")
-_OPT_CV     = _CV_FILE.read_text(encoding="utf-8") if _CV_FILE.exists() else ""
-_OPT_LTR    = _LTR_FILE.read_text(encoding="utf-8") if _LTR_FILE.exists() else ""
+_OPT_CV   = (_GUIDES_DIR / "optimisation_cv.md").read_text(encoding="utf-8")
+_OPT_LTR  = (_GUIDES_DIR / "optimisation_lettre.md").read_text(encoding="utf-8")
 
 
 # ---------------------------------------------------------------------------

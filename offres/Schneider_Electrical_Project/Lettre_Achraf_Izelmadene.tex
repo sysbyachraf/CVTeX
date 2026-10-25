@@ -1,0 +1,98 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../templates/altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'équipe de Recrutement} \\
+  \textbf{Schneider Electric} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Candidature Stage -- Chef de Projet Affaires (Modernisation d'installations électriques)
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève ingénieur en dernière année de cycle d'ingénieur en Génie Électrique et Systèmes Intelligents à l'EMSI, je vous adresse avec enthousiasme ma candidature pour le stage de Chef de Projet Affaires au sein de votre activité Services à Grenoble. Ce qui me motive particulièrement pour ce poste, c'est l'opportunité d'accompagner concrètement vos clients dans la modernisation et l'amélioration de la performance de leurs installations électriques. Découvrir et piloter toutes les étapes de réalisation d'une affaire à forte valeur technique est un défi dans lequel je souhaite m'investir.
+
+\vspace{0.4cm}
+
+Au cours de mon stage en Bureau d'Études chez Core Engineering Solutions, j'ai eu l'opportunité de travailler sur le dimensionnement d'un poste de livraison HTA/BT et l'intégration d'installations solaires. La réalisation de bilans de puissance et de notes de calcul (via Caneco BT et AutoCAD) m'a permis d'acquérir la rigueur technique essentielle aux études électriques. J'ai également consolidé mon adaptabilité et ma compréhension des enjeux opérationnels lors de mon stage industriel chez Menara Prefa, où j'ai été confronté aux réalités du terrain (diagnostic de pannes, maintenance sur automates industriels) et au respect d'exigences de sécurité strictes.
+
+\vspace{0.4cm}
+
+De plus, mon intérêt prononcé pour la gestion de projets techniques s'est concrétisé lors de l'étude complète d'un système de contrôle qualité industriel automatisé. J'y ai piloté les phases d'élaboration du cahier des charges, de planification, d'analyse des risques et d'étude de rentabilité (Business Case). Parfaitement à l'aise avec les outils bureautiques (Excel, PowerPoint) et disposant d'un excellent niveau d'anglais, je suis prêt à assister vos chefs de projet dans la coordination des parties prenantes, le suivi budgétaire et l'élaboration de solutions techniques.
+
+\vspace{0.4cm}
+
+Particulièrement attiré par votre environnement collaboratif et orienté terrain, je serais ravi de m'investir pleinement dans la réussite de vos projets industriels. Je me tiens à votre entière disposition pour un premier entretien afin d'échanger sur les apports mutuels de notre collaboration.
+
+\vspace{0.5cm}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

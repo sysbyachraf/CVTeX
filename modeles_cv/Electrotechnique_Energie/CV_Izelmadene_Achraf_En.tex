@@ -1,0 +1,160 @@
+﻿% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.0cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\DisableLigatures{encoding=*, family=*}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\renewcommand{\emailsymbol}{}
+\renewcommand{\phonesymbol}{}
+\renewcommand{\linkedinsymbol}{in/}
+\renewcommand{\locationsymbol}{}
+
+\hypersetup{
+  pdftitle={Curriculum Vitae -- Achraf Izelmadene},
+  pdfauthor={Achraf Izelmadene}
+}
+\photo{2.8cm}{imageee_small.jpg}
+
+\renewcommand{\cvsection}[2][]{%
+  \vspace{3pt}%
+  {\color{heading}\LARGE\bfseries #2 \hspace{0.2em}\leaders\vrule height 4pt depth -2pt\hfill\mbox{}}\par\vspace{2pt}
+}
+\renewcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\vspace{1pt}}
+
+\renewcommand{\cvevent}[4]{%
+  {\large\bfseries\color{accent}#1\par}
+  \smallskip\normalsize
+  \ifstrequal{#2}{}{}{%
+    \textbf{\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
+  }%
+  \hfill
+  \ifstrequal{#3}{}{}{{\small#3}}%
+  \par\smallskip
+}
+
+% ---- V2 : banniÃ¨re compacte ----
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \noindent
+    \begin{minipage}[c]{\@photodiameter}
+      \begin{tikzpicture}
+        \useasboundingbox (-0.5\linewidth,-0.5\linewidth) rectangle (0.5\linewidth,0.5\linewidth);
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.1\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}%
+    \end{minipage}\hspace{1.2em}%
+    \begin{minipage}[c]{\dimexpr\linewidth-\@photodiameter-1.2em}
+      \raggedright\color{emphasis}%
+      {\fontsize{22}{24}\selectfont\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+      {\large\bfseries\color{accent}\@tagline\par}\vspace{3pt}
+      {\small\bfseries\color{emphasis}\@objective\par}\vspace{2pt}
+      {\small\color{body}\@profile\par}\vspace{4pt}
+      {\footnotesize\bfseries\color{emphasis}\@personalinfo\par}
+    \end{minipage}\par
+  \endgroup\smallskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Engineering Student - Electrical \& Power Engineering}
+\objective{Seeking a 6-month final-year internship starting February 1st, 2027, to leverage my skills in MV/LV sizing and photovoltaic engineering.}
+\profile{Passionate about energy transition, I aim to contribute to the design of photovoltaic power plants and the sizing of electrical installations.}
+\personalinfo{%
+  \phone{+212699098736}%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}%
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}%
+  \location{Marrakech, Morocco}%
+}
+\makecvheader
+\cvsection{EXPERIENCE}
+\cvevent{Design Office Intern}{Core Engineering Solutions}{Jul. - Aug. 2026}{Berrechid, Casablanca}
+\begin{itemize}
+\item Sizing of an MV/LV substation and integration of a self-consumption solar PV installation.
+\item Creation of single-line diagrams, power balances, and calculation notes (AutoCAD, Caneco BT, PVsyst).
+\end{itemize}
+\cvevent{Industrial Production Intern}{Menara Prefa}{Jul. 2024}{Marrakech}
+\begin{itemize}
+\item Migration of an industrial PLC to Siemens S7 using TIA Portal, followed by preventive/corrective maintenance.
+\item Diagnosis of electrical faults and participation in the continuous improvement of industrial processes.
+\end{itemize}
+
+\cvsection{PROJECTS}
+{\large\bfseries\color{accent} Precision Agriculture IoT Ecosystem}\\[0.05cm]
+\begin{itemize}
+  \item Deployment of a LoRa wireless IoT network connecting sensor nodes (Arduino) to a gateway (ESP32).
+  \item Integration of an Edge AI (TFLite) and development of a web dashboard for global system supervision.
+\end{itemize}
+
+{\large\bfseries\color{accent} Predictive Maintenance 4.0 via AutoML}\\[0.05cm]
+\begin{itemize}
+  \item Comparison of AutoML tools TPOT vs. Auto-WEKA on IoT data (vibration, temperature).
+  \item Time-series cross-validation, SMOTE, automated ML pipelines, and NDT study via oil analysis.
+\end{itemize}
+
+{\large\bfseries\color{accent} Control of an AC Voltage Controller via Arduino}\\[0.05cm]
+\begin{itemize}
+  \item Precise modeling in Simulink and Hardware-in-the-Loop (HIL) interfacing with an Arduino board.
+  \item Real-time control and regulation of electrical power via firing angle control.
+\end{itemize}
+
+\cvsection{EDUCATION}
+\cvevent{Engineering Student in Electrical Engineering and Smart Systems}{Moroccan School of Engineering Sciences (EMSI)}{2025 - Present}{Marrakech}
+\small Electrical Networks \& Installations, Power Electronics, Electrical Networks \& Safety,\\
+\small Control Systems, Smart Sensors, Industrial Supervision \& Digital Twin, Production \& Maintenance, Project Management...
+
+\cvevent{Bachelor in Physical Sciences, Control Systems option}{Semlalia Faculty of Sciences}{2020 - 2024}{Marrakech}
+\small Electromagnetism, Electronics, Signal Processing, Control Systems, Instrumentation, Industrial IT...
+
+\cvsection{SKILLS}
+\begin{tabular}{@{}ll@{}}
+\textbf{Engineering \& Tools :} & Caneco BT, PVsyst, AutoCAD, MATLAB, Simulink, 3DEXPERIENCE, Git, Docker \\[2pt]
+\textbf{Programming \& AI :} & Python, C/C++, JavaScript, HTML/CSS, Machine Learning, Scikit-learn, AutoML, MLOps \\[2pt]
+\textbf{Soft Skills :} & Analytical Rigor, Technical Curiosity, Autonomy, Synthesis Skills, Teamwork \\
+\end{tabular}
+
+\cvsection{CERTIFICATIONS}
+\begin{itemize}[leftmargin=*, label=\textbullet, itemsep=2pt]
+  \item \textbf{Foundations of IoT Systems and Industrial Automation} \hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{Sensors and Sensor Circuit Design} \hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator} \hfill {\color{emphasis}Dassault Systèmes}
+  \item \textbf{MATLAB / Simulink Onramp} \hfill {\color{emphasis}MathWorks}
+\end{itemize}
+
+\cvsection{ACTIVITIES \& COMPETITIONS}
+\begin{itemize}[leftmargin=*, label=\textbullet, itemsep=2pt]
+  \item \textbf{Hack The Intelligence} (AISEC 2026) - \textbf{1\textsuperscript{st} Prize} : {\small Development of the Smart Agriculture IoT project.}
+  \item \textbf{Vision AI Competition} (EMSI 2026) - \textbf{2\textsuperscript{nd} Prize} : {\small Design of a sign language (ASL) translation system.}
+  \item \textbf{COCIA'26 Congress} - \textbf{Scientific Presentation} : {\small Design of the SmartStruct piezoelectric lighting prototype.}
+  \item \textbf{Hackathon RallyIA} (2026) - \textbf{Participation} : {\small Architecture design of the "FindSpot" (Smart Parking) project.}
+\end{itemize}
+
+
+\cvsection{LANGUAGES \& MISCELLANEOUS}
+\textbf{Arabic :} Native \hfill \textbf{French :} DELF B2 \hfill \textbf{English :} EFSET B2\\[2pt]
+\textbf{Driving License :} B \hfill \textbf{Hobbies :} Reading, Chess, DIY Electronics
+
+\end{document}

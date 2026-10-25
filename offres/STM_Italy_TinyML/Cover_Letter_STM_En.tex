@@ -1,0 +1,102 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\renewcommand{\emailsymbol}{}
+\renewcommand{\phonesymbol}{}
+\renewcommand{\linkedinsymbol}{in/}
+\renewcommand{\locationsymbol}{}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Embedded Systems \& AI Engineering Student (TinyML)}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Morocco}
+}
+
+\makecvheader
+
+\bigskip
+
+\begin{flushright}
+  {\color{emphasis}\textbf{To:}} \\[2pt]
+  \textbf{Recruitment Team} \\
+  \textbf{STMicroelectronics (Italy)} \\[20pt]
+  \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+{\color{accent}\textbf{Subject :}} Application for "Internship: Embedded AI for Speech Enhancement on STM32"
+
+\bigskip\bigskip
+
+Dear Hiring Manager,
+
+\vspace{0.4cm}
+
+As a final-year Engineering student specializing in Embedded Systems and Smart Systems at the Moroccan School of Engineering Sciences (EMSI), I have always viewed STMicroelectronics as the absolute pioneer driving the hidden foundation of modern technology. Driven by a passion for hardware innovation and the desire to build smarter, greener ecosystems, I am thrilled to apply for the Embedded AI (TinyML) internship position within your R\&D team.
+
+\vspace{0.4cm}
+
+The challenge of deploying complex Neural Networks on memory-constrained devices perfectly aligns with my academic background and practical experience. I have developed strong foundational skills in C/C++ embedded programming, Python, and Digital Signal Processing (DSP). Most notably, during my "Precision Agriculture IoT Ecosystem" project, I successfully deployed an Edge AI solution, integrating a TensorFlow Lite for Microcontrollers (TinyML) model directly onto an ESP32 edge gateway. This experience taught me how to navigate the strict constraints of memory, latency, and power consumption inherent to embedded machine learning.
+
+\vspace{0.4cm}
+
+Furthermore, your project involving a prototype bone-conduction earbud with an ST vibrometer strongly resonates with my experience in processing raw, noisy sensor data. In my Predictive Maintenance 4.0 project, I utilized automated Machine Learning (AutoML) pipelines and signal processing techniques to analyze complex vibration data. I am eager to apply these analytical skills, along with techniques like model quantization and real-time C firmware optimization, to port and enhance your speech recognition AI pipeline on an STM32 MCU.
+
+\vspace{0.4cm}
+
+Curious, rigorous, and highly adaptable, I am recognized for my problem-solving skills, having won the 1\textsuperscript{st} Prize at the "Hack The Intelligence" competition. I am fluent in English and excited by the prospect of working in an international environment alongside the diverse and dedicated creators at STMicroelectronics. 
+
+\vspace{0.4cm}
+
+I would welcome the opportunity to discuss how my background in embedded firmware and TinyML can contribute to the success of your prototype. Thank you for considering my application.
+
+\vspace{0.5cm}
+
+\vfill
+
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

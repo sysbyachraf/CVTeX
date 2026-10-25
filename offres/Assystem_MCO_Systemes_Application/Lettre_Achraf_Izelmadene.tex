@@ -1,0 +1,122 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs (identiques au CV) ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% ── En-tête identique au CV ──────────────────────────────────────────────────
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% Pas de photo pour la lettre de motivation
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \ifdef{\@photodiameter}{%
+    \begin{minipage}{\@photodiameter}
+    \if@normalphoto
+      \includegraphics[width=\linewidth]{\@photo}
+    \else
+      \begin{tikzpicture}
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.1\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}
+    \fi%
+    \end{minipage}\hspace{1.5em}%
+    \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+    \ifdef{\@photodiameter}{%
+    \end{minipage}\par}{}%
+  \endgroup\medskip
+}
+\makeatother
+
+% ── Séparateur horizontal coloré ─────────────────────────────────────────────
+\newcommand{\lettersep}{%
+  {\color{heading}\rule{\linewidth}{1.5pt}}\par\medskip
+}
+
+% ── Identité ─────────────────────────────────────────────────────────────────
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+
+% Destinataire (a droite, convention francaise)
+\begin{flushright}
+  \textbf{Assystem} \\[2pt]
+  {\color{emphasis}\textbf{À l'attention du Service Recrutement / Ressources Humaines}} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Candidature au stage PFE : Ingénieur Systèmes et Informatique Industrielle
+\bigskip\smallskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.35cm}
+
+Actuellement en dernière année de cycle ingénieur à l'École Marocaine des Sciences de l'Ingénieur (EMSI) en Génie Électrique et Systèmes Intelligents, je recherche un stage de fin d'études de 4 à 6 mois à compter du 1er février 2027. Votre offre de stage au sein d'Assystem a retenu toute mon attention, en particulier vos activités sur les calculateurs d'acquisition de données des centrales nucléaires 900 et 1300 MW.
+
+\vspace{0.35cm}
+
+Ce stage correspond directement à mes compétences en informatique industrielle et en instrumentation. Lors de mon stage chez Menara Prefa, j'ai travaillé sur la migration d'un automate vers un système Siemens S7 sous TIA Portal. Cette mission m'a permis d'intervenir sur le matériel, d'effectuer des diagnostics de pannes et de suivre les opérations de maintenance en atelier. Dans mes projets à l'EMSI, j'ai également conçu des chaînes d'acquisition de mesures avec capteurs et microcontrôleurs, en rédigeant des procédures de test et en vérifiant la cohérence des données mesurées par rapport aux valeurs attendues.
+
+\vspace{0.35cm}
+
+Les missions que vous décrivez, notamment la rédaction de documents d'essai, l'intégration de nouvelles versions logicielles et matérielles, ainsi que l'analyse des écarts lors des validations, représentent exactement la pratique technique et la rigueur que je souhaite approfondir sur des installations industrielles.
+
+\vspace{0.35cm}
+
+Méthodique, habitué au travail en équipe et attentif aux détails techniques, je souhaite mettre mon investissement au service de votre équipe d'intégration.
+
+\vspace{0.35cm}
+
+Je reste à votre entière disposition pour échanger avec vous sur cette opportunité lors d'un entretien.
+
+\vspace{0.4cm}
+
+% ── Formule de politesse ─────────────────────────────────────────────────────
+Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

@@ -24,20 +24,6 @@
   - Gestion de Projet et Entreprenariat
   - Langues et Communication professionnelle
 
-  ### Semestre 9 
-  - Management et contrôle qualité
-  - Lean Management
-  - Communication professionnelle : PFE/Soutenance
-  - Business English
-  - Compétences d'employabilité
-  - Audit et Efficacité énergétique
-  - Projet SMART GRIDS
-  - Hygiène, Sécurité et environnement
-  - Energies Renouvelable : Production et stockage
-  - SMART GRIDS
-  - Simulation des flux industriels
-  - Systèmes embarqués
-
 ## Licence SMP, option Automatique — Faculté des Sciences Semlalia Marrakech (2020 — 2024)
 
 - Field: Automatique (Sciences de la Matière Physique)

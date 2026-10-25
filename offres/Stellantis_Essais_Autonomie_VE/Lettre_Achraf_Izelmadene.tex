@@ -1,0 +1,101 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% Remplacement des icônes par du texte pour rester cohérent avec le CV ATS
+\renewcommand{\emailsymbol}{}
+\renewcommand{\phonesymbol}{}
+\renewcommand{\linkedinsymbol}{in/}
+\renewcommand{\locationsymbol}{}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Équipe Recrutement Engineering} \\
+  \textbf{Stellantis} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+{\color{accent}\textbf{Objet :}} Candidature au poste de Stagiaire Ingénieur Essais Autonomie VE (Banc GMP)
+
+\bigskip\bigskip
+
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), spécialisé en Génie Électrique et Systèmes Intelligents, je suis à la recherche d'un stage de fin d'études de 6 mois pour le premier semestre 2027. C'est avec un vif intérêt que je vous soumets ma candidature pour contribuer à la fiabilisation des essais d'autonomie des véhicules électriques (VE) sur banc de groupe motopropulseur au sein de Stellantis. 
+
+\vspace{0.4cm}
+
+Votre projet d'établir une méthode de comparaison fiable entre les essais sur banc GMP et sur véhicule complet résonne particulièrement avec ma formation. En effet, la synergie entre la maîtrise de la chaîne de traction électrique et l'exploitation experte de données physiques correspond parfaitement à mes compétences. À travers mes projets académiques et compétitifs, tels que le déploiement de modèles de Machine Learning pour la maintenance prédictive (AutoML), j'ai acquis une solide expérience dans le traitement, la visualisation et l'analyse critique de données de capteurs. Je dispose par ailleurs de bonnes bases en MATLAB et Python, des outils que je sais mettre à profit pour isoler les causes de divergence expérimentales (température, rendements, auxiliaires) et quantifier les incertitudes de mesure.
+
+\vspace{0.4cm}
+
+Au-delà de mon appétence pour l'analyse de données (data science), j'ai une véritable sensibilité terrain. Lors de mes précédents stages, notamment chez Menara Prefa, j'ai été confronté aux exigences de l'instrumentation, du diagnostic sur des équipements réels et de la validation expérimentale. Je suis reconnu pour ma rigueur méthodologique, ma curiosité face aux phénomènes physiques complexes et ma capacité à proposer des indicateurs de comparaison pertinents et objectifs. Travailler sur des projets stratégiques comme le STLA ONE représente un défi passionnant où mon sens de l'équipe et ma proactivité pourront pleinement s'exprimer.
+
+\vspace{0.4cm}
+
+Désireux de mettre mon esprit d'analyse et mes compétences en génie électrique au service de l'innovation automobile de Stellantis, je me tiens à votre entière disposition pour vous exposer de vive voix mes motivations et mon projet professionnel. 
+
+\vspace{0.4cm}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations respectueuses.
+
+\vspace{0.5cm}
+
+\vfill
+
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

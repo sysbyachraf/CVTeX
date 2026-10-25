@@ -1,0 +1,98 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Smart Systems}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'équipe Recrutement} \\
+  \textbf{Groupe Renault} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Stage Ingénieur - Robotique et Automatisation d'Essais
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), je suis spécialisé en Génie Électrique et Systèmes Intelligents. C'est avec un vif intérêt que je vous adresse ma candidature pour rejoindre votre équipe en tant que stagiaire. L'ambition d'automatiser vos campagnes de validation sur véhicule correspond parfaitement à mon projet professionnel en mécatronique et robotique.
+
+\vspace{0.4cm}
+
+Au cours de ma formation, j'ai développé de solides compétences en modélisation cinématique, en informatique et en électronique embarquée. Mon projet de simulation d'un bras robotique m'a permis d'implémenter des algorithmes de cinématique inverse en Python et d'interfacer des modèles 3D sous PyBullet. De plus, la conception de systèmes embarqués complexes (Arduino, ESP32) m'a appris à gérer le prototypage de l'actionneur jusqu'au logiciel de pilotage. Ces compétences me permettront d'être rapidement opérationnel pour développer la plateforme robotisée de bout en bout.
+
+\vspace{0.4cm}
+
+Par ailleurs, mes expériences m'ont conforté dans la rigueur et l'autonomie nécessaires pour mener à bien la validation sur des systèmes réels. Pouvoir exploiter le Creative Lab (IA) serait pour moi une formidable opportunité de donner vie à la conception mécanique du robot et de valider les scénarios automatisés (pédales, boutons) directement sur véhicule réel.
+
+\vspace{0.4cm}
+
+Fortement motivé pour participer à l'aventure de l'automobile de demain au sein de vos équipes, je me tiens à votre entière disposition pour un premier entretien.
+
+\vspace{0.5cm}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

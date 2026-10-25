@@ -1,0 +1,98 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\renewcommand{\emailsymbol}{}
+\renewcommand{\phonesymbol}{}
+\renewcommand{\linkedinsymbol}{in/}
+\renewcommand{\locationsymbol}{}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique \& Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'Équipe de Recrutement} \\
+  \textbf{Stellantis} \\[20pt]
+  Le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+{\color{accent}\textbf{Objet :}} Candidature Stage Ingénieur Automatisme et Gestion Technique Centralisée (GTC)
+
+\bigskip\bigskip
+
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Actuellement en dernière année de cycle d'ingénieur en Génie Électrique, je suis à la recherche d'un stage de fin d'études de 6 mois. Mon parcours m'a permis d'acquérir une solide expertise technique à la croisée de l'automatisme industriel et de la distribution électrique. Lors de mon stage en unité de production chez Menara Prefa, j'ai pu gérer la migration d'un automate Siemens S7, développer mes connaissances des protocoles de communication industrielle et intervenir directement sur la supervision des processus. Par la suite, en bureau d'études chez Core Engineering Solutions, j'ai perfectionné mes compétences en électrotechnique par le dimensionnement de postes HTA/BT et l'intégration de solutions solaires. Ces expériences m'ont forgé la rigueur et l'organisation nécessaires pour mener à bien des projets techniques complexes.
+
+\vspace{0.4cm}
+
+De son côté, Stellantis s'affirme comme un leader mondial de la mobilité, avec des usines toujours plus performantes et respectueuses de l'environnement. Votre offre pour piloter les projets d'automatisation et de digitalisation des infrastructures du site a particulièrement retenu mon attention. Garantir la disponibilité d'une Gestion Technique Centralisée (GTC) tout en optimisant la consommation énergétique est un défi technique majeur et passionnant. Je sais que l'innovation, l'amélioration continue de la performance environnementale et économique, ainsi que la capacité à travailler en transversalité sont des priorités absolues pour maintenir l'excellence de vos sites de production.
+
+\vspace{0.4cm}
+
+Ensemble, nous pourrons relever le défi de la performance énergétique de vos infrastructures. Mon profil d'ingénieur automaticien et électrotechnicien, couplé à ma forte capacité d'analyse des données industrielles (acquise notamment sur mes projets de maintenance prédictive 4.0), me permettra de m'approprier rapidement votre système de supervision GTC/GTB. Autonome, force de proposition et doté d'un bon relationnel, je serais ravi de m'intégrer à vos équipes pour faire dialoguer les équipements via les réseaux industriels, identifier de nouveaux gisements d'économies d'énergie et contribuer activement à l'amélioration de la performance du site.
+
+\vspace{0.4cm}
+
+Dans l'attente de pouvoir vous démontrer mon esprit de synthèse et mon dynamisme lors d'un entretien, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{0.5cm}
+
+\vfill
+
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

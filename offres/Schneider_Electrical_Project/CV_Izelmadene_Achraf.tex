@@ -1,0 +1,156 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../templates/altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.0cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\DisableLigatures{encoding=*, family=*}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\renewcommand{\emailsymbol}{\faEnvelope}
+\renewcommand{\phonesymbol}{\faPhone}
+\renewcommand{\linkedinsymbol}{\faLinkedin}
+\renewcommand{\locationsymbol}{\faMapMarker}
+\makeatletter
+\renewcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\normalfont #1}\hspace{0.35em}#2}\hspace{1.1em}}
+\newcommand{\objective}[1]{\def\@objective{#1}}
+\newcommand{\profile}[1]{\def\@profile{#1}}
+\makeatother
+\graphicspath{{./}{../}{../../templates/}}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Curriculum Vitae -- Achraf Izelmadene},
+  pdfauthor={Achraf Izelmadene},
+  pdfsubject={Ingénieur Génie Électrique et Systèmes Intelligents}
+}
+\photo{2.8cm}{assets/imageee.png}
+
+\renewcommand{\cvsection}[2][]{%
+  \vspace{3pt}%
+  {\color{heading}\LARGE\bfseries #2 \hspace{0.2em}\leaders\vrule height 4pt depth -2pt\hfill\mbox{}}\par\vspace{2pt}
+}
+\renewcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\vspace{1pt}}
+
+\renewcommand{\cvevent}[4]{%
+  {\large\bfseries\color{accent}#1\par}
+  \vspace{1pt}\normalsize
+  \ifstrequal{#2}{}{}{%
+    \textbf{\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
+  }%
+  \hfill
+  \ifstrequal{#3}{}{}{{\small#3}}%
+  \par\vspace{1pt}
+}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \noindent
+    \begin{minipage}[c]{\@photodiameter}
+      \begin{tikzpicture}
+        \useasboundingbox (-0.5\linewidth,-0.5\linewidth) rectangle (0.5\linewidth,0.5\linewidth);
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.1\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}%
+    \end{minipage}\hspace{1.2em}%
+    \begin{minipage}[c]{\dimexpr\linewidth-\@photodiameter-1.2em}
+      \raggedright\color{emphasis}%
+      {\fontsize{22}{24}\selectfont\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+      {\large\bfseries\color{accent}\@tagline\par}\vspace{3pt}
+      {\small\bfseries\color{emphasis}\@objective\par}\vspace{2pt}
+      {\small\color{body}\@profile\par}\vspace{4pt}
+      {\footnotesize\bfseries\color{emphasis}\@personalinfo\par}
+    \end{minipage}\par
+  \endgroup\smallskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\objective{À la recherche d'un stage de fin d'études de 6 mois dès février 2027 : Chef de Projet Affaires pour la modernisation d'installations électriques.}
+\profile{Passionné par l'efficacité énergétique, je souhaite mettre mes compétences techniques (HT/BT, électrotechnique) et ma rigueur organisationnelle au service du suivi de vos projets. Fort d'expériences terrain en bureau d'études électriques et en unité de production, j'allie esprit d'analyse et sens relationnel pour coordonner efficacement vos affaires industrielles.}
+\personalinfo{%
+  \phone{+212699098736}%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}%
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}%
+  \location{Marrakech, Maroc}%
+}
+
+\makecvheader
+
+\cvsection{EXPÉRIENCE}
+\cvevent{Stagiaire Bureau d'Études (Ingénierie Électrique)}{Core Engineering Solutions}{juil. - août 2026}{Berrchid, Casablanca}
+\begin{itemize}
+\item Dimensionnement complet d'un poste de livraison HTA/BT et intégration d'une installation solaire PV en autoconsommation.
+\item Élaboration de solutions techniques adaptées aux besoins clients : schémas unifilaires, bilans de puissance et notes de calcul (AutoCAD, Caneco BT, PVsyst).
+\end{itemize}
+\cvevent{Stagiaire en Unité de Production}{Menara Prefa}{juil. 2024}{Marrakech}
+\begin{itemize}
+\item Immersion en environnement industriel : suivi des opérations de maintenance préventive/corrective (Automate Siemens S7).
+\item Diagnostic des pannes électriques et participation à l'amélioration continue, dans le respect des exigences de sécurité.
+\end{itemize}
+
+\cvsection{PROJETS}
+{\large\bfseries\color{accent} Pilotage de Projet Industriel (Contrôle Qualité Automobile)}\\[0.05cm]
+\begin{itemize}
+  \item Gestion d'un projet technique complet (de l'initiation à la clôture) pour l'intégration d'un système de vision automatisé.
+  \item Élaboration du cahier des charges, analyse des risques, planification et chiffrage financier (Business Case, ROI).
+\end{itemize}
+
+{\large\bfseries\color{accent} Analyse et Détection d'anomalies Smartgrid (Réseaux Électriques)}\\[0.05cm]
+\begin{itemize}
+  \item Étude et monitoring d'un réseau électrique intelligent (Smartgrid) par le traitement de flux de données industrielles.
+  \item Conception d'un dashboard de supervision et d'indicateurs de performance facilitant la prise de décision.
+\end{itemize}
+
+% Project removed for space
+
+\cvsection{FORMATION}
+\cvevent{Étudiant en cycle d'ingénieur en Génie Électrique et Systèmes Intelligents}{École Marocaine des Sciences de l'Ingénieur}{2025 - Présent}{Marrakech}
+\small Conception des installations électriques, Électronique de puissance, Smart Grids, Audit énergétique,\\
+\small Automatique, Industrie du Futur, Capteurs Intelligents, Supervision \& Digital Twin, Production, Gestion de projet...
+
+\cvevent{Licence SMP, option Automatique}{Faculté des Sciences Semlalia}{2020 - 2024}{Marrakech}
+\small Électromagnétisme, Électronique, Traitement du signal, Automatique, Instrumentation, Informatique Industrielle...
+
+\cvsection{COMPÉTENCES}
+\begin{tabular}{@{}ll@{}}
+\textbf{Ingénierie Électrique :} & Équipements HT/BT, Dimensionnement, Caneco BT, AutoCAD, PVsyst, MATLAB, Simulink \\[2pt]
+\textbf{Gestion de Projets :} & Planification, Suivi budgétaire, Analyse des risques, Pack Office (Excel, PowerPoint), 3DEXPERIENCE \\[2pt]
+\textbf{Compétences transversales :} & Rigueur, Organisation, Autonomie, Travail en équipe pluridisciplinaire, Communication professionnelle \\
+\end{tabular}
+
+\cvsection{CERTIFICATIONS}
+\begin{itemize}[leftmargin=*, label=\textbullet, itemsep=2pt]
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator} \hfill {\color{emphasis}Dassault Systèmes}
+  \item \textbf{Foundations of IoT Systems and Industrial Automation} \hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{Sensors and Sensor Circuit Design} \hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+\end{itemize}
+
+\cvsection{ACTIVITÉS \& COMPÉTITIONS}
+\begin{itemize}[leftmargin=*, label=\textbullet, itemsep=2pt]
+  \item \textbf{Hack The Intelligence} (AISEC 2026) - \textbf{1\textsuperscript{er} Prix} : {\small Coordination et développement du projet Smart Agriculture IoT.}
+  \item \textbf{Congrès COCIA'26} - \textbf{Présentation Scientifique} : {\small Conception du prototype d'éclairage piézoélectrique SmartStruct.}
+\end{itemize}
+
+
+\cvsection{LANGUES \& DIVERS}
+\textbf{Arabe :} Langue maternelle \hfill \textbf{Français :} DELF B2 \hfill \textbf{Anglais :} EFSET C2\\[2pt]
+\textbf{Permis de conduire :} B \hfill \textbf{Loisirs :} Lecture, Échecs, Électronique DIY
+
+\end{document}

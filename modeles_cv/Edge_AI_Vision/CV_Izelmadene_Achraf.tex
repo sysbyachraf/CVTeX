@@ -1,0 +1,173 @@
+﻿% !TEX TS-program = pdflatex
+% AGENT INSTRUCTION: ALWAYS check the `kb/` folder (like kb/skills.md or kb/README.MD) for 
+% skills, projects, and domain vocabulary whenever tailoring this CV.
+\documentclass[10pt,a4paper]{altacv}
+
+% Ajustement des marges pour 1 seule colonne
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.0cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage{microtype}
+\DisableLigatures{encoding=*, family=*} % ATS-fix: Disables fi/fl/ffi ligatures in pdfLaTeX
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% V2 : petites icÃ´nes dans la ligne de contact
+\renewcommand{\emailsymbol}{\faEnvelope}
+\renewcommand{\phonesymbol}{\faPhone}
+\renewcommand{\linkedinsymbol}{\faLinkedin}
+\renewcommand{\locationsymbol}{\faMapMarker}
+\makeatletter
+\renewcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\normalfont #1}\hspace{0.35em}#2}\hspace{1.1em}}
+\newcommand{\objective}[1]{\def\@objective{#1}}
+\newcommand{\profile}[1]{\def\@profile{#1}}
+\makeatother
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Curriculum Vitae -- Achraf Izelmadene},
+  pdfauthor={Achraf Izelmadene},
+  pdfsubject={Ingénieur Génie Électrique et Systèmes Intelligents},
+  pdfkeywords={génie électrique, IoT, automatisation, AutoML, robotique, PFE, stage}
+}
+\photo{2.8cm}{assets/imageee.png}
+
+\renewcommand{\cvsection}[2][]{%
+  \vspace{3pt}%
+  {\color{heading}\LARGE\bfseries #2 \hspace{0.2em}\leaders\vrule height 4pt depth -2pt\hfill\mbox{}}\par\vspace{2pt}
+}
+\renewcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\vspace{1pt}}
+
+\renewcommand{\cvevent}[4]{%
+  {\large\bfseries\color{accent}#1\par}
+  \vspace{1pt}\normalsize
+  \ifstrequal{#2}{}{}{%
+    \textbf{\color{emphasis}#2\ifstrequal{#4}{}{}{ - #4}}%
+  }%
+  \hfill
+  \ifstrequal{#3}{}{}{{\small#3}}%  % Removed calendar icon
+  \par\vspace{1pt}
+}
+
+% ---- V2 : banniÃ¨re compacte ----
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \noindent
+    \begin{minipage}[c]{\@photodiameter}
+      \begin{tikzpicture}
+        \useasboundingbox (-0.5\linewidth,-0.5\linewidth) rectangle (0.5\linewidth,0.5\linewidth);
+        \clip (0,0) circle (0.5\linewidth);
+        \node at (0,-0.1\linewidth) {\includegraphics[width=1.05\linewidth]{\@photo}};
+      \end{tikzpicture}%
+    \end{minipage}\hspace{1.2em}%
+    \begin{minipage}[c]{\dimexpr\linewidth-\@photodiameter-1.2em}
+      \raggedright\color{emphasis}%
+      {\fontsize{22}{24}\selectfont\bfseries\MakeUppercase{\@name}\par}\vspace{2pt}
+      {\large\bfseries\color{accent}\@tagline\par}\vspace{3pt}
+      {\small\bfseries\color{emphasis}\@objective\par}\vspace{2pt}
+      {\small\color{body}\@profile\par}\vspace{4pt}
+      {\footnotesize\bfseries\color{emphasis}\@personalinfo\par}
+    \end{minipage}\par
+  \endgroup\smallskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur - IA Embarquée \& Vision par Ordinateur}
+\objective{À la recherche d'un stage de fin d'études PFE dès le 1\textsuperscript{er} février 2027 en IA embarquée et Computer Vision.}
+\profile{Passionné par l'Edge AI, je souhaite contribuer au déploiement de modèles de Machine Learning sur des microcontrôleurs et au développement de solutions d'analyse d'images.}
+\personalinfo{%
+  \phone{+212699098736}%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}%
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}%
+  \location{Marrakech, Maroc}%
+}
+\makecvheader
+\cvsection{EXPÉRIENCE}
+\cvevent{Stagiaire Bureau d'Études}{Core Engineering Solutions}{juil. - août 2026}{Berrchid, Casablanca}
+\begin{itemize}
+\item Dimensionnement d'un poste HTA/BT et intégration d'une installation solaire PV en autoconsommation.
+\item Réalisation de schémas unifilaires, bilans de puissance et notes de calcul (AutoCAD, Caneco BT, PVsyst).
+\end{itemize}
+\cvevent{Stagiaire en Unité de Production}{Menara Prefa}{juil. 2024}{Marrakech}
+\begin{itemize}
+\item Migration d'un automate industriel vers Siemens S7 sous TIA Portal, suivi de maintenance préventive/corrective.
+\item Diagnostic des pannes électriques et participation à l'amélioration continue des processus industriels.
+\end{itemize}
+
+\cvsection{PROJETS}
+% AGENT INSTRUCTION: You must list a MINIMUM of 2 and a MAXIMUM of 3 projects. 
+% Select the most relevant ones from the kb/ based on the job offer and space constraints.
+{\large\bfseries\color{accent} Precision Agriculture IoT Ecosystem}\\[0.05cm]
+\begin{itemize}
+  \item Déploiement d'un réseau IoT radio (LoRa) reliant des nœuds capteurs (Arduino) à une passerelle (ESP32).
+  \item Intégration d'une IA Edge (TFLite) et développement d'un dashboard web pour la supervision globale du système.
+\end{itemize}
+
+{\large\bfseries\color{accent} Maintenance Prédictive 4.0 par AutoML}\\[0.05cm]
+\begin{itemize}
+  \item Comparaison d'outils AutoML TPOT vs. Auto-WEKA sur des données IoT (vibrations, température).
+  \item Validation croisée temporelle, SMOTE, pipelines ML automatisés et étude CND par analyse d'huile.
+\end{itemize}
+
+{\large\bfseries\color{accent} Détection d'anomalies Smartgrid (Clustering)}\\[0.05cm]
+\begin{itemize}
+  \item Évaluation d'algorithmes (KMeans, DBSCAN) sur des flux de données IoT de réseaux électriques.
+  \item Développement d'un dashboard dédié à la visualisation des clusters et au monitoring d'anomalies.
+\end{itemize}
+
+\cvsection{FORMATION}
+\cvevent{Étudiant en cycle d'ingénieur en Génie Électrique et Systèmes Intelligents}{École Marocaine des Sciences de l'Ingénieur}{2025 - Présent}{Marrakech}
+\small Réseaux et Installations électriques, Sécurité électrique, Électronique de puissance, Supervision \& Digital Twin, Gestion de projet...
+
+\cvevent{Licence SMP, option Automatique}{Faculté des Sciences Semlalia}{2020 - 2024}{Marrakech}
+\small Électromagnétisme, Électronique, Traitement du signal, Automatique, Instrumentation, Informatique Industrielle...
+%\cvevent{Baccalauréat Scientifique, option Sciences Physiques et Chimiques}{Lycée Maghreb Al Arabi}{2019 -- 2020}{Marrakech}
+
+\cvsection{COMPÉTENCES}
+% AGENT INSTRUCTION: The CV MUST stay on ONE page. Hide irrelevant competence groupings 
+% (e.g., hide 'Programmation & IA' for a pure electrical engineering offer) to tailor the CV and save space.
+\begin{tabular}{@{}ll@{}}
+\textbf{Ingénierie \& Outils :} & Caneco BT, PVsyst, AutoCAD, MATLAB, Simulink, 3DEXPERIENCE, Git, Docker \\[2pt]
+\textbf{Programmation \& IA :} & Python, C/C++, JavaScript, HTML/CSS, Machine Learning, Scikit-learn, AutoML, MLOps \\[2pt]
+\textbf{Compétences transversales :} & Esprit d'équipe, Assiduité, Gestion de projet \\
+\end{tabular}
+
+\cvsection{CERTIFICATIONS}
+\begin{itemize}[leftmargin=*, label=\textbullet, itemsep=2pt]
+  \item \textbf{Foundations of IoT Systems and Industrial Automation} \hfill {\color{emphasis}LearnQuest (Coursera)}
+  \item \textbf{Sensors and Sensor Circuit Design} \hfill {\color{emphasis}University of Colorado Boulder (Coursera)}
+  \item \textbf{Certified 3DEXPERIENCE Collaborative Industry Innovator} \hfill {\color{emphasis}Dassault Systèmes}
+  \item \textbf{MATLAB / Simulink Onramp} \hfill {\color{emphasis}MathWorks}
+\end{itemize}
+
+\cvsection{ACTIVITÉS \& COMPÉTITIONS}
+\begin{itemize}[leftmargin=*, label=\textbullet, itemsep=2pt]
+  \item \textbf{Hack The Intelligence} (AISEC 2026) - \textbf{1\textsuperscript{er} Prix} : {\small Développement du projet Smart Agriculture IoT.}
+  \item \textbf{Vision AI Competition} (EMSI 2026) - \textbf{2\textsuperscript{ème} Prix} : {\small Conception d'un système de traduction en langue des signes (ASL).}
+  \item \textbf{Congrès COCIA'26} - \textbf{Présentation Scientifique} : {\small Conception du prototype d'éclairage piézoélectrique SmartStruct.}
+  \item \textbf{Hackathon RallyIA} (2026) - \textbf{Participation} : {\small Conception de l'architecture du projet "FindSpot" (Parking Intelligent).}
+\end{itemize}
+
+
+\cvsection{LANGUES \& DIVERS}
+\textbf{Arabe :} Langue maternelle \hfill \textbf{Français :} DELF B2 \hfill \textbf{Anglais :} EFSET B2\\[2pt]
+\textbf{Permis de conduire :} B \hfill \textbf{Loisirs :} Lecture, Échecs, Électronique DIY
+
+
+\end{document}
+
+

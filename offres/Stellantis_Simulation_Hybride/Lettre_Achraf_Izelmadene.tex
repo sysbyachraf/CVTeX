@@ -1,0 +1,97 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% Remplacement des icônes par du texte pour rester cohérent avec le CV ATS
+\renewcommand{\emailsymbol}{}
+\renewcommand{\phonesymbol}{}
+\renewcommand{\linkedinsymbol}{in/}
+\renewcommand{\locationsymbol}{}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Responsable du Recrutement} \\
+  \textbf{Stellantis} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+{\color{accent}\textbf{Objet :}} Candidature au poste de Stagiaire Ingénieur Simulation Performance et Consommation
+
+\bigskip\bigskip
+
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), spécialisé en Génie Électrique et Systèmes Intelligents, je suis à la recherche d'un stage de fin d'études (PFE) de 6 mois à partir du premier semestre 2027. Passionné par l'innovation technologique et l'évolution des motorisations hybrides et électriques, c'est avec un vif intérêt que je vous soumets ma candidature pour rejoindre la Direction Propulsion System du Groupe Stellantis, au sein de l'équipe VAPP.
+
+\vspace{0.4cm}
+
+Votre offre a particulièrement retenu mon attention car elle s'inscrit parfaitement dans la continuité de ma formation et de mon appétence pour la modélisation système. Au cours de mon cursus, j'ai développé de solides compétences en simulation sous MATLAB/Simulink (certifié par MathWorks) ainsi qu'en programmation Python. À travers mes projets académiques et compétitifs, intégrant l'IoT et le Machine Learning pour l'optimisation de données (AutoML), j'ai pu démontrer ma capacité à concevoir et à tester des modèles complexes. Le développement de modèles analytiques pour estimer les performances et la consommation de chaines de traction est donc un défi technique très stimulant pour lequel je me sens pleinement outillé.
+
+\vspace{0.4cm}
+
+Curieux et doté d'un bon esprit d'analyse, je suis prêt à m'investir de manière proactive dans la réalisation d'études bibliographiques et le développement d'une bibliothèque de composants. Par ailleurs, ma maîtrise de l'anglais (niveau B2+) me permettra de collaborer efficacement au sein de votre équipe internationale. Rejoindre Stellantis représente pour moi une formidable opportunité de contribuer à des projets d'envergure globale et de participer activement à la transition vers des motorisations plus efficientes.
+
+\vspace{0.4cm}
+
+Dans l'attente de pouvoir vous démontrer ma motivation lors d'un prochain entretien, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{0.5cm}
+
+\vfill
+
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

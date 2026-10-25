@@ -1,0 +1,97 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Smart Systems}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'équipe Recrutement} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Stage Ingénieur - Ingénierie Système ADAS (DMS)
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), je suis spécialisé en Génie Électrique et Systèmes Intelligents. C'est avec un grand intérêt que je vous adresse ma candidature pour rejoindre votre équipe ADAS en tant que Stagiaire Ingénieur. Votre ambition de formaliser le comportement des fonctions DMS et d'améliorer la fiabilité de l'automobile de demain correspond parfaitement à mon projet professionnel en ingénierie système.
+
+\vspace{0.4cm}
+
+Au cours de ma formation, j'ai développé de solides compétences en modélisation (SysML, State Machines) et en analyse d'exigences fonctionnelles. Mes projets académiques, notamment la conception d'architectures de systèmes embarqués, m'ont permis de traduire des besoins complexes en modèles cohérents et de formaliser le comportement des systèmes via des diagrammes d'état précis. Ces compétences me permettront d'être rapidement opérationnel pour structurer et maintenir la base d'exigences de votre Driver Monitoring System.
+
+\vspace{0.4cm}
+
+De plus, mes expériences en milieu industriel, telles que mon stage chez Menara Prefa, m'ont conforté dans la rigueur requise pour garantir le fonctionnement nominal, dégradé et sécurisé (recovery) des équipements critiques. Évoluer au sein de vos équipes système et développement me donnerait l'opportunité de mettre à profit mon esprit de synthèse et ma maîtrise des outils de modélisation pour identifier toute ambiguïté dans les spécifications et assurer une traçabilité parfaite.
+
+\vspace{0.4cm}
+
+Fortement motivé pour participer à l'aventure de l'automobile de demain, et disposant d'un très bon niveau d'anglais technique, je me tiens à votre entière disposition pour un premier entretien.
+
+\vspace{0.5cm}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

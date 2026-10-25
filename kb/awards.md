@@ -21,7 +21,7 @@
 - Domain: [Recherche Scientifique, Smart City, Energy Harvesting]
 - Description: Projet SmartStruct (éclairage piézoélectrique) sélectionné et présenté devant un jury de professionnels lors du congrès scientifique COCIA'26.
 
-## Finaliste / Participation — Hackathon RallyIA
+## Participation — Hackathon RallyIA
 
 - Organizer: RallyIA
 - Year: 2026
@@ -41,10 +41,3 @@
 - Year: 2026
 - Domain: [Smart City, Développement Durable, Innovation]
 - Description: Participation au challenge d'innovation (Mai 2026) avec la présentation du prototype d'éclairage public piézoélectrique SmartStruct.
-
-## Bénévolat & Action Sociale — Enseignement Solidaire
-
-- Organizer: Association caritative locale
-- Year: 2025
-- Domain: [Bénévolat, Pédagogie, Soutien scolaire, Engagement social]
-- Description: Enseignement et soutien scolaire bénévole dispensés à des enfants orphelins au sein d'une association (accompagnement pédagogique, renforcement des compétences scolaires fondamentales et tutorat humain).

@@ -1,0 +1,94 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../templates/altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'équipe de Recrutement} \\
+  \textbf{Schneider Electric} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Candidature Stage -- Ingénieur en Intelligence Artificielle Embarquée
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève ingénieur spécialisé en Génie Électrique et Systèmes Intelligents à l'École Marocaine des Sciences de l'Ingénieur (EMSI), je vous soumets avec enthousiasme ma candidature pour le stage de recherche et développement au sein de votre équipe Embedded AI. Déployer des modèles d'intelligence artificielle sur des systèmes embarqués extrêmement contraints est un défi technique passionnant. Les travaux menés par Schneider Electric pour rendre les produits industriels de nouvelle génération autonomes et intelligents résonnent particulièrement avec ma vision de l'innovation.
+
+\vspace{0.4cm}
+
+Au fil de ma formation et de mes projets, j'ai développé une double compétence forte, à la croisée de l'IA (Edge Computing) et des systèmes matériels. J'ai notamment eu l'opportunité de concevoir un système de Vision AI pour la traduction de la langue des signes, où l'optimisation des temps d'inférence et le déploiement sous TensorFlow Lite étaient au cœur de mes préoccupations. De plus, j'ai participé au développement d'un prototype de système Smart Agriculture IoT, déployant des modèles d'IA sur des cartes microcontrôleurs (ESP32) pour le traitement local de données.
+
+\vspace{0.4cm}
+
+Votre offre souligne également l'importance de l'analyse de données pour la détection d'anomalies. C'est une problématique que j'ai eu l'opportunité d'aborder lors d'un projet de clustering sur des flux de données IoT issus de réseaux électriques (Smartgrids). Maîtrisant Python et C/C++, j'ai à cœur de développer des pipelines reproductibles et d'explorer les compromis entre précision, latence, mémoire et consommation énergétique. Rejoindre Schneider Electric, leader mondial de la gestion de l'énergie, représente pour moi l'environnement idéal pour transformer cette expertise en solutions concrètes et industrialisables.
+
+\vspace{0.4cm}
+
+Je serais ravi de discuter plus amplement de la manière dont mon profil et mon énergie pourront contribuer aux objectifs de l'équipe Embedded AI. Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

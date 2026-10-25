@@ -1,0 +1,97 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+
+% Destinataire (a droite, convention francaise)
+\begin{flushright}
+  \textbf{Assystem} \\[2pt]
+  {\color{emphasis}\textbf{À l'attention du Service Recrutement / Ressources Humaines}} \\
+  \textbf{Groupe métier Électricité, Contrôle Commande et HVAC} \\[15pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+% Objet
+{\color{accent}\textbf{Objet :}} Candidature Stage PFE -- Ingénieur d'Études Génie Électrique
+\bigskip\smallskip
+
+% Corps de la lettre
+Madame, Monsieur,
+
+\vspace{0.35cm}
+
+Actuellement en dernière année de cycle ingénieur en Génie Électrique et Systèmes Intelligents à l'École Marocaine des Sciences de l'Ingénieur (EMSI), je recherche un stage de fin d'études de 4 à 6 mois à compter du 1er février 2027. Votre offre de stage chez Assystem, dédiée au développement d'un outil intelligent de prédimensionnement des câbles BT et HTA pour votre bureau d'études, correspond exactement à mes compétences : le calcul d'installations électriques et le développement d'outils en Python.
+
+\vspace{0.35cm}
+
+Lors de mon stage chez Core Engineering Solutions, j'ai réalisé le dimensionnement d'un poste HTA/BT, des bilans de puissance et des notes de calcul sous Caneco BT en respectant la norme NF C15-100. Cette expérience concrète m'a familiarisé avec les paramètres clés du dimensionnement de câbles : chute de tension, courant admissible, échauffement thermique, facteurs de correction liés aux modes de pose et température ambiante.
+
+\vspace{0.35cm}
+
+En parallèle de ma formation électrotechnique, je programme régulièrement en Python et je développe des modèles d'intelligence artificielle. Dans mes projets universitaires, j'ai déjà conçu des scripts de calcul automatique et des interfaces logicielles pour traiter des données techniques. Je suis donc en mesure de formaliser les règles normatives (NF C15-100, IEC 60287) sous forme d'algorithmes clairs, tout en explorant l'apport de briques d'IA pour assister les ingénieurs dans leurs choix de sections de câbles.
+
+\vspace{0.35cm}
+
+Rigoureux dans l'application des normes techniques, curieux et motivé par les exigences du secteur nucléaire, je souhaite mettre mes compétences au service de votre groupe métier Électricité.
+
+\vspace{0.35cm}
+
+Je reste à votre entière disposition pour échanger avec vous lors d'un entretien.
+
+\vspace{0.4cm}
+
+Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

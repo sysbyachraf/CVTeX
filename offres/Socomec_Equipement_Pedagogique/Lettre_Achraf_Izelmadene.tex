@@ -1,0 +1,102 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\renewcommand{\emailsymbol}{}
+\renewcommand{\phonesymbol}{}
+\renewcommand{\linkedinsymbol}{in/}
+\renewcommand{\locationsymbol}{}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique \& Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'Équipe de Recrutement} \\
+  \textbf{Socomec} \\[20pt]
+  Le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+{\color{accent}\textbf{Objet :}} Candidature Stage ingénieur électrotechnique
+
+\bigskip\bigskip
+
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Actuellement en dernière année de cycle d'ingénieur en Génie Électrique, je suis à la recherche d'un stage de fin d'études de 6 mois. Lors de ma récente expérience en bureau d'études chez Core Engineering Solutions, j'ai eu l'opportunité de dimensionner des postes électriques (HTA/BT) et d'intégrer des installations solaires. Cette mission m'a exigé de réaliser des schémas unifilaires, des bilans de puissance ainsi que des notes de calculs poussées. J'ai ainsi acquis une solide méthode pour mener des études de faisabilité technico-économiques et rédiger des cahiers des charges précis, compétences que je souhaite aujourd'hui mettre à profit.
+
+\vspace{0.4cm}
+
+Par ailleurs, la réalisation de tests, la validation de prototypes et le suivi d'équipements sont des compétences que j'ai pu éprouver concrètement. J'ai notamment conçu un prototype matériel de commande de puissance (gradateur) interfacé avec une carte Arduino (Hardware-in-the-Loop) et mis en place un réseau de capteurs physiques IoT. De plus, mon passage en unité de production chez Menara Prefa m'a permis de gérer la migration d'un automate industriel (Siemens S7) et de diagnostiquer des pannes électriques. Cette immersion m'a fortement sensibilisé aux impératifs du terrain et de la maintenance, m'assurant une grande aisance pour suivre la réalisation en série de vos équipements avec les ateliers.
+
+\vspace{0.4cm}
+
+De son côté, Socomec s'impose mondialement comme un acteur incontournable de la coupure et du contrôle de l'énergie. Votre offre au sein du service Expert Technique a particulièrement retenu mon attention. Concevoir un équipement pédagogique pour vos forces de vente est un défi stimulant qui allie rigueur technique et transmission du savoir. Je sais que l'innovation, la conception d'équipements de qualité et le travail d'équipe sont au cœur de vos missions, ce qui correspond pleinement à ma volonté de rejoindre une entreprise leader pour y concevoir des solutions fiables et didactiques.
+
+\vspace{0.4cm}
+
+Ensemble, nous pourrons mener à bien ce projet depuis l'étude de faisabilité jusqu'à la validation du prototype et la réalisation en série avec vos ateliers. Mon profil d'ingénieur électrotechnicien, couplé à ma capacité à concevoir et tester du matériel physique (comme je l'ai fait sur mes projets de commande de puissance), nous permettra de répondre parfaitement aux objectifs pédagogiques fixés. De plus, mon niveau d'anglais B2 facilitera la lecture et la rédaction des spécifications techniques. Pédagogue, communicant et force de proposition, je serais ravi de m'intégrer à votre groupe pour garantir la réussite technique de cet équipement et participer à la formation de vos équipes commerciales.
+
+\vspace{0.4cm}
+
+Dans l'attente de pouvoir vous démontrer mon dynamisme et mon autonomie lors d'un entretien, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{0.5cm}
+
+\vfill
+
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

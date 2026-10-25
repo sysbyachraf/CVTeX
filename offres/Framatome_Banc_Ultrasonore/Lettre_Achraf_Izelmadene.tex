@@ -1,0 +1,102 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\renewcommand{\emailsymbol}{}
+\renewcommand{\phonesymbol}{}
+\renewcommand{\linkedinsymbol}{in/}
+\renewcommand{\locationsymbol}{}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur - Automatisme \& Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Équipe de Recrutement EDF / Framatome} \\
+  \textbf{Centre de Recherche Composants (Ugine, Savoie)} \\[20pt]
+  \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+{\color{accent}\textbf{Objet :}} Candidature au stage - "Pilotage et amélioration d'un banc ultrasonore motorisé"
+
+\bigskip\bigskip
+
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Reconnu pour son expertise dans la fabrication de composants nucléaires, le groupe EDF/Framatome incarne l'exigence absolue en matière de sûreté industrielle. Actuellement en dernière année d'ingénierie avec une forte spécialisation en automatisme, je suis vivement intéressé par votre projet d'amélioration du contrôle dimensionnel des tubes de générateur de vapeur. C'est avec un grand enthousiasme que je vous soumets ma candidature pour participer à l'optimisation et au pilotage de votre banc ultrasonore motorisé.
+
+\vspace{0.4cm}
+
+Le pilotage de systèmes motorisés et l'intégration d'algorithmes de suivi de trajectoire exigent une solide culture en automatique et en instrumentation. Au cours de ma formation, j'ai développé une grande aisance dans la programmation appliquée à l'ingénierie (Matlab, Python), non pas comme développeur logiciel, mais bien comme ingénieur automaticien capable de traiter des signaux, de modéliser et de piloter des systèmes physiques complexes. Mes projets académiques (maintenance prédictive, contrôle Hardware-in-the-Loop) m'ont permis de concevoir des boucles de contrôle robustes et d'optimiser des paramètres d'acquisition directement exploitables dans l'industrie.
+
+\vspace{0.4cm}
+
+L'intégration d'un capteur de référence et la calibration des mesures résonnent parfaitement avec mes compétences terrain en interfaçage matériel. Mon expérience industrielle chez Menara Prefa, où j'ai géré la migration d'un automate et fiabilisé des processus de production, m'a appris à concevoir des plans de validation rigoureux et à dialoguer efficacement avec les équipes de techniciens. Je saurai ainsi m'intégrer rapidement aux côtés de vos experts en mesures ultrasonores pour tester et valider les fonctionnalités de l'équipement.
+
+\vspace{0.4cm}
+
+Curieux, autonome et passionné par les défis de la robotique et de l'automatisme industriel, je suis particulièrement motivé à l'idée d'évoluer au sein de votre Centre de Recherche. Mon profil d'ingénieur, alliant la maîtrise des outils de modélisation à la compréhension physique des capteurs, me permettra d'apporter des solutions robustes à votre équipement.
+
+\vspace{0.4cm}
+
+Dans l'attente de pouvoir vous démontrer ma motivation lors d'un entretien, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{0.5cm}
+
+\vfill
+
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Achraf Izelmadene}
+\end{flushright}
+
+\end{document}

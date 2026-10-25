@@ -1,0 +1,98 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'équipe Recrutement} \\
+  \textbf{Capgemini Engineering} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Stage Ingénieur - Architecture et Distribution Électrique (Aéronautique)
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), je suis spécialisé en Génie Électrique et Systèmes Intelligents. C'est avec un grand intérêt que je vous adresse ma candidature pour rejoindre Capgemini Engineering en tant que Stagiaire Ingénieur. Votre mission de décarbonisation de l'aviation et le développement de systèmes de distribution pour l'électrification d'avions correspondent parfaitement à mon ambition d'innover pour les enjeux de l'Intelligent Industry.
+
+\vspace{0.4cm}
+
+Au cours de ma formation, j'ai développé de solides compétences en automatique et en électronique de puissance. Mon projet académique sur la commande de puissance, incluant la conception d'un gradateur et des simulations avancées via MATLAB/Simulink en environnement Hardware-in-the-Loop, m'a permis d'appréhender avec précision la modélisation et le contrôle des convertisseurs. Ces compétences me permettront d'être rapidement opérationnel pour la simulation et le dimensionnement préliminaire des sources électriques de la nouvelle architecture propulsive.
+
+\vspace{0.4cm}
+
+De plus, mon stage au sein du bureau d'études Core Engineering Solutions m'a conforté dans la rigueur requise pour le dimensionnement d'installations électriques et l'analyse des contraintes fonctionnelles. Évoluer au sein de votre équipe d'ingénieurs me donnerait l'opportunité de mettre à profit mon esprit d'analyse, ma capacité de synthèse, et ma maîtrise des outils de simulation pour anticiper les défis de l'architecture aéronautique de demain (Safety, contraintes de certification).
+
+\vspace{0.4cm}
+
+Fortement motivé pour rejoindre Capgemini, et disposant d'un niveau d'anglais professionnel pour collaborer avec vos équipes internationales, je me tiens à votre entière disposition pour un premier entretien.
+
+\vspace{0.5cm}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

@@ -1,0 +1,98 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'équipe Recrutement} \\
+  \textbf{Skyray Engineering} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Stage Ingénieur - Electrical Engineering (PV \& BESS)
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), je suis spécialisé en Génie Électrique. C'est avec un grand intérêt que je vous adresse ma candidature pour le stage de fin d'études (6 mois) au sein de votre équipe Electrical Engineering. La mission de Skyray Engineering d'accompagner la conception de centrales photovoltaïques et de systèmes de stockage d'énergie (BESS) à grande échelle résonne pleinement avec mon projet professionnel et mon attrait pour la transition énergétique dans un environnement européen.
+
+\vspace{0.4cm}
+
+Au cours de mon stage en Bureau d'Études chez Core Engineering Solutions, j'ai eu l'opportunité de travailler sur le dimensionnement d'un poste de livraison HTA/BT et l'étude d'intégration d'une installation solaire photovoltaïque en autoconsommation. La réalisation de schémas unifilaires, de bilans de puissance et de notes de calcul (via Caneco BT et AutoCAD) m'a permis d'acquérir la rigueur et l'organisation essentielles aux études électriques. J'ai également consolidé mes compétences techniques et mon adaptabilité lors de mon stage industriel chez Menara Prefa, où j'ai été confronté aux réalités du terrain et au respect d'exigences opérationnelles strictes.
+
+\vspace{0.4cm}
+
+De plus, mes différents projets (Commande de puissance Hardware-in-the-Loop, détection d'anomalies Smartgrid) m'ont permis de développer un esprit critique pointu et de solides compétences en analyse de systèmes de puissance. Intégrer Skyray serait l'opportunité idéale d'appliquer ces compétences à la revue de conception de vos architectures électriques et à l'analyse de livrables, tout en collaborant en anglais au quotidien. Particulièrement attiré par vos valeurs de conscience environnementale et d'esprit « one-team », je serais ravi de m'investir sur vos projets d'infrastructures.
+
+\vspace{0.4cm}
+
+Fortement motivé par cette opportunité, je me tiens à votre entière disposition pour un premier entretien afin d'échanger sur les apports mutuels de notre collaboration.
+
+\vspace{0.5cm}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

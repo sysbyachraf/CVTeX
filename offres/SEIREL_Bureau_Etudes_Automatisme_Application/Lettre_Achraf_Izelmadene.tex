@@ -1,0 +1,98 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'équipe Recrutement} \\
+  \textbf{SEIREL} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Stage Ingénieur Bureau d'Études Électrique et Automatisme
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), je suis spécialisé en Génie Électrique et Automatisme. C'est avec un grand intérêt que je vous adresse ma candidature pour le stage au sein de votre bureau d'études, à pourvoir dès février/mars 2027. L'expertise de SEIREL dans les systèmes de transport par câble et la garantie d'automatismes de sécurité performants résonnent avec mon fort attrait pour l'ingénierie électrique en milieu industriel.
+
+\vspace{0.4cm}
+
+Au cours de ma récente expérience en tant que Stagiaire Bureau d'Études chez Core Engineering Solutions, j'ai eu l'opportunité de travailler sur le dimensionnement et l'implantation d'équipements électriques, avec la réalisation de schémas unifilaires et de notes de calcul (Caneco BT, AutoCAD). J'ai également consolidé mes compétences en automatisme industriel lors de mon stage chez Menara Prefa, où j'ai participé à la migration d'un automate vers un environnement Siemens S7, ainsi qu'au développement des systèmes de supervision et d'IHM associés. Ces expériences m'ont permis de développer la rigueur et l'autonomie essentielles pour évoluer efficacement au sein d'une équipe projet.
+
+\vspace{0.4cm}
+
+De plus, mes projets (Commande de puissance Hardware-in-the-Loop, détection d'anomalies Smartgrid) m'ont permis de développer de solides compétences en tests, validation d'équipements et programmation. Intégrer SEIREL serait l'opportunité idéale de mettre mes compétences CAO et automatisme au service de vos équipements sur-mesure. Animé par la perspective d'évoluer dans un environnement de haute technicité et d'accompagner le cycle complet d'un projet jusqu'à la mise en service sur site, je serais ravi de m'investir au sein de vos équipes avec la perspective d'une collaboration à long terme.
+
+\vspace{0.4cm}
+
+Fortement motivé pour rejoindre votre site à Saint-Priest (69) pour ce stage de 6 mois, je me tiens à votre entière disposition pour un premier entretien.
+
+\vspace{0.5cm}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

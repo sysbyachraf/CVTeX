@@ -1,0 +1,98 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Capucine -- Responsable d'Equipe} \\
+  \textbf{Assystem} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Stage Ingénieur Automatisme (Nucléaire \& Énergie)
+
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), je suis spécialisé en Génie Électrique et Automatisme. C'est avec un grand intérêt que je vous adresse ma candidature pour rejoindre votre équipe en tant que Stagiaire Ingénieur Automatisme. La mission d'Assystem de répondre aux défis de la transition énergétique et de soutenir la souveraineté sur des infrastructures critiques résonne pleinement avec mon projet professionnel dans les secteurs du Nucléaire et de l'Énergie.
+
+\vspace{0.4cm}
+
+Au cours de mon stage en milieu industriel chez Menara Prefa, j'ai eu l'opportunité de travailler directement sur l'amélioration d'équipements de production. J'y ai notamment participé à la migration d'un automate vers l'environnement TIA Portal, ainsi qu'au suivi des systèmes de supervision et de contrôle-commande. Ces tâches de programmation d'automates, couplées à la rédaction de documentation technique et aux opérations de maintenance, m'ont préparé à la rigueur exigée pour la pérennisation des automatismes industriels.
+
+\vspace{0.4cm}
+
+De plus, mes divers projets académiques, tels que la commande de puissance en environnement Hardware-in-the-Loop (Simulink) ou l'analyse de réseaux Smartgrid, m'ont permis de développer de solides capacités d'analyse et de synthèse. Évoluer au sein de votre plateau d'intégration pour les installations d'Orano ou d'EDF serait le cadre idéal pour mettre à profit mon esprit d'équipe lors des essais en plateforme. Particulièrement attiré par la qualité d'accompagnement au sein d'Assystem, je serais ravi de m'investir sur vos projets à forte valeur ajoutée.
+
+\vspace{0.4cm}
+
+Fortement motivé par cette perspective d'évolution au sein d'un environnement multi-projets stimulant, je me tiens à votre entière disposition pour un premier entretien.
+
+\vspace{0.5cm}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

@@ -209,3 +209,8 @@ CVTeX/
 - **Name**: Achraf Izelmadene
 - **Field**: Electrical Engineering & Embedded Intelligent Systems (Génie Électrique et Systèmes Intelligents)
 - **School**: EMSI Marrakech (Final Year / PFE) & FSSM (Licence)
+
+- **À propos de moi (Profil) Guidelines**:
+  La rubrique « À propos de moi » doit être conçue comme une accroche et doit donner envie à la personne qui lira votre CV de se pencher sur le reste de votre candidature et d'aller voir plus en détail vos compétences et expériences.
+  La rubrique « À propos de moi » de votre CV doit permettre au recruteur de se faire une idée de votre profil en quelques secondes.
+  La rubrique « À propos de moi » de votre CV peut vous aider à y parvenir.

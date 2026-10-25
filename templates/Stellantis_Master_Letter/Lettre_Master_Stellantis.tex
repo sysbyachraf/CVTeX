@@ -1,0 +1,108 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{StellantisRed}{HTML}{E3000F} % Couleur pour les parties à modifier
+
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\renewcommand{\emailsymbol}{}
+\renewcommand{\phonesymbol}{}
+\renewcommand{\linkedinsymbol}{in/}
+\renewcommand{\locationsymbol}{}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{Équipe Recrutement R\&D} \\
+  \textbf{Stellantis} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+{\color{accent}\textbf{Objet :}} Candidature au poste de Stagiaire Ingénieur \textcolor{StellantisRed}{\textbf{[Intitulé exact de l'offre (ex: Automatisation MiL / Essais GMP VE)]}}
+
+\bigskip\bigskip
+
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), spécialisé en Génie Électrique et Systèmes Intelligents, je suis à la recherche d'un stage de fin d'études de 6 mois pour le premier semestre 2027. Passionné par l'innovation technologique automobile, c'est avec un vif intérêt que je vous soumets ma candidature pour rejoindre vos équipes d'ingénierie.
+
+\vspace{0.4cm}
+
+% ----------------- BLOC FIXE (80%) -----------------
+L'industrie automobile vit une transformation technologique majeure, où la modélisation et la maîtrise des données sont devenues aussi cruciales que la mécanique. C'est exactement à la croisée de ces domaines que se situe mon profil. D'une part, j'ai développé de solides bases en ingénierie électrique et en simulation, certifiées notamment sur MATLAB/Simulink par MathWorks. D'autre part, je possède une réelle expertise en programmation Python et en analyse de données (Machine Learning, AutoML), me permettant d'automatiser des traitements, d'isoler des anomalies et d'optimiser des processus physiques complexes.
+% --------------------------------------------------
+
+\vspace{0.4cm}
+
+% ----------------- BLOC MODULABLE (20%) -----------------
+Votre offre concernant \textcolor{StellantisRed}{\textbf{[le domaine du stage : ex. l'analyse sur plateforme MiL / l'étude d'autonomie sur banc GMP]}} correspond parfaitement à ma volonté de mettre ces compétences analytiques au service de cas d'usages physiques concrets au sein du Groupe Stellantis. Travailler sur des enjeux tels que \textcolor{StellantisRed}{\textbf{[le défi principal : ex. l'intégration de LLM / l'isolement des causes de divergence]}} représente pour moi un défi technique particulièrement stimulant pour lequel je me sens pleinement outillé.
+% -------------------------------------------------------
+
+\vspace{0.4cm}
+
+% ----------------- CONCLUSION FIXE -----------------
+Curieux, rigoureux et autonome, j'ai pu démontrer lors de mes précédents stages (notamment en milieu industriel) et compétitions d'innovation (1\textsuperscript{er} Prix Hack The Intelligence) ma capacité à m'approprier rapidement des systèmes complexes et à proposer des méthodes rigoureuses. Doté d'un bon niveau d'anglais (B2+), je suis prêt à m'investir de manière proactive au sein de vos équipes internationales.
+
+\vspace{0.4cm}
+
+Dans l'attente de pouvoir vous démontrer ma motivation lors d'un prochain entretien, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{0.5cm}
+
+\vfill
+
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}

@@ -1,0 +1,97 @@
+% !TEX TS-program = pdflatex
+\documentclass[10pt,a4paper]{../../altacv}
+
+\geometry{left=1.5cm,right=1.5cm,top=3.5cm,bottom=3cm,footskip=2\baselineskip}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% ── Couleurs ──────────────────────────────────────────────
+\definecolor{Navy}{HTML}{0A2540}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\makeatletter
+\renewcommand{\makecvheader}{%
+  \begingroup
+    \raggedright\color{emphasis}%
+    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\footnotesize\bfseries\@personalinfo\par}
+  \endgroup\medskip
+}
+\makeatother
+
+\begin{document}
+
+\name{Izelmadene Achraf}
+\tagline{Élève Ingénieur en Génie Électrique et Systèmes Intelligents}
+\personalinfo{%
+  \email{\href{mailto:achraf.izelmadene@gmail.com}{achraf.izelmadene@gmail.com}}
+  \phone{+212 699 098 736}
+  \linkedin{\href{https://www.linkedin.com/in/achraf-izelmadene/}{achraf-izelmadene}}
+  \location{Marrakech, Maroc}
+}
+
+\makecvheader
+
+\bigskip
+\medskip
+
+% ── Destinataire ───────────────────────────
+\begin{flushright}
+  {\color{emphasis}\textbf{À l'attention de :}} \\[2pt]
+  \textbf{L'équipe Recrutement} \\
+  \textbf{Zeplug \& ChargeGuru} \\[20pt]
+  Marrakech, le \today
+\end{flushright}
+\bigskip
+
+\bigskip
+
+% ── Objet ────────────────────────────────────────────────────────────────────
+{\color{accent}\textbf{Objet :}} Stage Ingénieur Innovation et Développement IRVE
+\bigskip\bigskip
+
+% ── Corps de la lettre ───────────────────────────────────────────────────────
+Madame, Monsieur,
+
+\vspace{0.4cm}
+
+Élève Ingénieur en dernière année à l'EMSI (École Marocaine des Sciences de l'Ingénieur), je suis spécialisé en Génie Électrique et Systèmes Intelligents. C'est avec un grand intérêt que je vous adresse ma candidature pour le stage d'Ingénieur Innovation et Développement Infrastructures de recharge, à pourvoir dès février 2027. L'ambition de Zeplug et ChargeGuru d'accélérer la transition énergétique résonne avec mes solides acquis en électrotechnique et mon fort attrait pour l'innovation technologique.
+
+\vspace{0.4cm}
+
+Au cours de ma récente expérience en tant que Stagiaire Bureau d'Études chez Core Engineering Solutions, j'ai eu l'opportunité de travailler sur le dimensionnement d'un poste HTA/BT et l'intégration d'une installation solaire photovoltaïque en autoconsommation. La réalisation de schémas unifilaires, de bilans de puissance et de notes de calcul via Caneco BT et PVsyst m'a permis de développer l'autonomie et la rigueur essentielles pour mener à bien des audits techniques. J'ai également consolidé mon adaptabilité en milieu industriel lors de mon stage chez Menara Prefa, où j'ai participé à la migration d'un automate vers un Siemens S7 et aux procédures de maintenance préventive.
+
+\vspace{0.4cm}
+
+De plus, mes projets académiques et personnels (Commande de puissance Hardware-in-the-Loop, détection d'anomalies Smart grid, réseaux IoT) m'ont permis de développer de solides compétences opérationnelles en électrotechnique, en tests de validation et en gestion de données. Intégrer votre Direction Technique serait l'opportunité idéale d'appliquer ces compétences aux études de dimensionnement d'IRVE et aux tests de bornes de recharge en atelier. Familier avec les raisonnements technico-économiques (VAN, ROI), je suis convaincu de pouvoir vous accompagner efficacement dans l'analyse de vos infrastructures pour optimiser vos choix techniques. 
+
+\vspace{0.4cm}
+
+Prêt à m'installer à Paris dès février 2027 pour ce stage de 6 mois, je me tiens à votre entière disposition pour un premier entretien. 
+
+\vspace{0.5cm}
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vfill
+
+% ── Signature ────────────────────────────────────────────────────────────────
+\begin{flushright}
+  \Large\color{emphasis}\textbf{Izelmadene Achraf}
+\end{flushright}
+
+\end{document}
